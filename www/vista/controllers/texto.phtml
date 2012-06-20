@@ -1,0 +1,20 @@
+<?= $txt->texto ?>
+<? if(!empty($galeria)){ ?>
+		<div id="galeria-texto">
+<?		foreach ($galeria as $imagen) {
+			$tag = "";
+			$url = URL_IMG."galerias/".$imagen->galeria."/".$imagen->imagen;
+			$video = false;
+			if (!empty($imagen->url_video)){
+				$url = $imagen->url_video;
+				$tag = "width='550px' height='400px' tag='SWF'";
+				$video = true;
+			}
+	?>
+			<a href='<?=$url?>' rel='lightbox[<?=$imagen->galeria?>]' <?=$tag?> title='<?=$imagen->descripcion?>' >
+				<img width='100px' height='100px' src='<?=URL_IMG."galerias/".$imagen->galeria."/".THUMBNAIL . "/".$imagen->imagen;?>' alt='<?=$imagen->descripcion?>'>
+				<?php  if($video) {?><span></span><?php } ?>
+			</a>
+	<? } ?>
+	</div>  
+<? } ?>

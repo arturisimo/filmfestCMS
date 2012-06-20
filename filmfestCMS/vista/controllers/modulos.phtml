@@ -1,0 +1,31 @@
+<form id='form_modulo' name='form_modulo' method='post'>
+	<input name='id' id='id' value='<?= $this->_id ?>' type='hidden'/>
+	
+	<div>
+		<p class="mini"><label><?=_("M&oacute;dulo")?></label>
+		<? if(empty($this->_id)){?>
+			 <input value='<?= $moduloAdmin ?>' name='modulo' id='modulo' />
+		<?} else {?>
+			<?= $moduloAdmin ?>
+			 <input value='<?= $moduloAdmin ?>' name='modulo' id='modulo' type="hidden" />
+		<?}?>
+		</p>
+		<p class="mini"><label><?=_("Nombre en el menu")?></label>
+			<input id="nombre" name="nombre" value="<?=$nombre?>" />
+		</p>
+		<p class="mini"><label><?=_("Nivel de acceso")?></label>
+			<select id="id_nivel_acceso" name="id_nivel_acceso">
+				<?= UtilPagina::getOptions($perfiles, $nivelAcceso) ?>	
+			</select>
+		</p>
+		<p class="mini"><label><?=_("Depende de otro m&oacute;dulo")?></label>
+			<select id="id_modulopadre" name="id_modulopadre">
+				<?= UtilPagina::getOptions($modulosPadre, $idModuloPadre) ?>
+			</select>
+		</p>
+		
+		<p class="break"><label><?=_("Breve descripci&oacute;n")?></label>
+		<input value='<?= $descripcion ?>' name='descripcion' id='descripcion' /></p>
+	</div>
+	<p class="boton-enviar"><input id='b_modulo' name='b_modulo' type="button" value="<?=_("aceptar")?>"> </p>	
+</form>

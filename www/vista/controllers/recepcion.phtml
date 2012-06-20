@@ -1,0 +1,27 @@
+<p> <?=_("Hemos recibido ")?> <strong><?= $total?></strong> <?=_(" obras hasta el momento. muchas gracias!!!")?></p>
+
+<table class='listado'>
+	<tr class='cabecera'>
+		<th></th><th><?= _("T&iacute;tulo")?></th><th><?=_("Ficha")?></th><th></th><th></th>
+	</tr>
+	
+	<? foreach ($peliculas as $pelicula) { ?>
+		<tr>
+			<td><a title='<?=$pelicula->titulo?>' href='<?=BASE_URL?>/pelicula/<?=$pelicula->id?>/<?=Util::stripAccents($pelicula->titulo)?>'>
+				<img height='50px' width='50px' src='<?= $pelicula->cartel ?>' title='<?=$pelicula->titulo?>' alt='<?=$pelicula->titulo?>' />
+				</a>
+			</td>
+			<td style='width:150px;'><a style='margin:0px 2px;' title='<?=$pelicula->titulo?>' href='<?=BASE_URL?>/pelicula/<?=$pelicula->id?>/<?=Util::stripAccents($pelicula->titulo)?>'><strong><?=$pelicula->titulo?></strong></a></td>
+			<td style='width:450px;'><?=$pelicula->autor?> <br> <?=$pelicula->duracion?> / <?=$pelicula->anyo?> <?=!empty($pelicula->genero) ? " / ".$pelicula->genero:"" ?> <?=!empty($pelicula->pais) ? " / ".$pelicula->pais:"" ?>  <?=(!empty($pelicula->nombre_licencia) && $pelicula->nombre_licencia!='Copyright') ? " / ".$pelicula->nombre_licencia:"" ?>
+			<br><?=Util::substring($pelicula->sinopsis, 67)?></td>
+			<td><?	if(!empty($pelicula->video)){ ?>
+						<a href='<?=$pelicula->video?>'width='550px' height='400px' rel='lightbox' tag='SWF' title='<?=$pelicula->titulo."  -  ".$pelicula->autor?>'><?=_("ver v&iacute;deo")?></a>
+				<?	}?>
+			</td>
+		</tr>
+	<? } ?>
+</table>
+
+<?	if ($totalPaginas > 1){ ?>
+	  	<div id='paginacion'><?= UtilPagina::paginacion($pag, $totalPaginas, $this->_baseUrl.$urlPagina)?></div>	
+<?	} ?>

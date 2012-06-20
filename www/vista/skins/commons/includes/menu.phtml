@@ -1,0 +1,9 @@
+<div id="topmenu-design">
+    <?= UtilPagina::menu($menu, $urlPagina, $this->_baseUrl, $idControllerMenu) ?>
+</div>	
+<div class="break"></div>
+<? if(isset($subMenu) && count($subMenu)>0){?>
+	<div id="submenu">
+		<?=	UtilPagina::menu($subMenu, $urlPagina, $this->_baseUrl, $idControllerMenu) ?>
+	</div>	
+<?}?>

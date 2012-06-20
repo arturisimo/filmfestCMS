@@ -1,0 +1,147 @@
+	<script src="<?=$urlCommons?>js/validaciones.js" type="text/javascript" language="javascript"></script>		
+	
+	<script language="javascript">
+	<!--
+		var gcMsg_titulo = '<?= _("> El t&iacute;tulo original es un campo obligatorio.<br>")?>';
+		var gcMsg_nombre = '<?= _("> El nombre de contacto es un campo obligatorio.<br>")?>';
+		var gcMsg_email = '<?= _("> El formato del email no es correcto.<br>")?>';
+		var gcMsg_telefono = '<?= _("> El telefono no es correcto.<br>")?>';
+		var gcMsg_mensaje = '<?= _("> La noticia es un campo obligatorio.<br>")?>';
+		var gcMsg_director = '<?= _("> El director es un campo obligatorio.<br>")?>';
+		var gcMsg_pais = '<?= _("> El pa&iacute;s es un campo obligatorio.<br>")?>';
+		var gcMsg_ano = '<?= _("> El a&ntilde;o es un campo obligatorio.<br>")?>';
+		var gcMsg_duracion = '<?= _("> La duraci&oacute;n es un campo obligatorio.<br>")?>';
+		var gcMsg_sinopsis = '<?= _("> La sinopsis es un campo obligatorio.<br>")?>';
+		var gcMsg_tecnica = '<?= _("> La ficha t&eacute;cnica es un campo obligatorio.<br>")?>';
+		var gcMsg_web = '<?= _("> La web no tiene un formato correcto.<br>")?>';
+		var gcMsg_video = '<?= _("> El enlace del v&iacute;deo no tiene un formato correcto.<br>")?>';
+		var gcMsg_videovacio = '<?= _("> Es necesario informar el enlace al v&iacute;deo en streaming.<br>")?>';
+		var gcMsg_coste = '<?= _("> El coste no es correcto<br>")?>';
+		var gcMsg_formulario = '<?= _("<strong>Oooops, el formulario no est&aacute; operativo todav&iacute;a. prueba a partir del lunes</strong>")?>';
+		var gcMsg_licencia = '<?= _("<strong>No has informado la licencia</strong> <br>")?>';
+		var gcMsg_revisa = '<?= _("<strong>Revisa los siguientes errores:</strong> <br>")?>';
+	//-->
+	</script> 
+	
+	<script src="<?=$urlCommons?>js/inscripcion.js" type="text/javascript" language="javascript"></script>	
+	<link href="<?=$urlSkin?>css/inscripcion.css" rel="stylesheet" type="text/css" />
+	
+	<div id="formularios">
+		<form id='form-pelicula' name='form-pelicula' method='post'>
+				<div id="div-contacto" class="">
+					<h3><?=_("Datos de contacto")?></h3>
+					<p><?=_("Estos datos es s&oacute;lo para ponernos en contacto. Se almacenan en nuestra base de datos y en ning&uacute;n caso se ceder&aacute; esta informaci&oacute;n a terceros ni se har&aacute;n p&uacute;blicos en la web.")?></p>
+					<label id="label-nombre"><?=_("Nombre")?> <span>(<?=_("obligatorio")?>)</span></label><input type="text" name="n-nombre" id="id_nombre" />
+					<label id="label-email"><?=_("E-mail")?> <span>(<?=_("obligatorio")?>)</span></label><input type="text" name="n-email" id="id_email" class="minusculas"/>
+					<label id="label-telefono"><?=_("Tel&eacute;fono")?></label><input type="text" name="n-telefono" id="id_telefono" maxlength="15"/>
+					<label id="label-tipo-contacto"><?=_("eres...")?></label>
+					<select name="n-tipo-contacto" id="id_tipocontacto"  multiple="multiple" size="3">
+						<option value="01" selected="selected"><?=_("Realizador/a")?></option>
+						<option value="02"><?=_("Empresa productora")?></option>
+						<option value="03"><?=_("Empresa distribuidora")?></option>
+					</select>
+					<p class="enlace-formulario"><a href="#" id="b-contacto"><?=_("Datos de la obra")?> &raquo;</a></p>
+				</div>
+			
+				<div id="div-pelicula" class="oculto">
+					<h3><?=_("Datos de la obra")?></h3>
+					<p><?=_("Los datos de la obra se colgar&aacute;n en nuestra p&aacute;gina web, para hacer en una ficha.")?></p>
+					<label id="label-titulo"><?=_("T&iacute;tulo")?> <span>(<?=_("obligatorio")?>)</span></label><input id="id_titulo" type="text" name="n-titulo" maxlength="100"  />									
+					<label id="label-autor"><?=_("Autor/es")?> <span>(<?=_("obligatorio")?>)</span></label><input type="text" name="n-autor" id="id_autor" />
+					<label id="label-duracion"><?=_("Duraci&oacute;n")?> <span>(<?=_("obligatorio")?>)</span></label><input type="text" class="campo-mini" name="n-minutos" id="id_minutos" /> <?=_("minutos")?>   <input type="text" class="campo-mini" name="n-segundos" id="id_segundos" /> <?=_("segundos")?>
+					<label id="label-anyo"><?=_("A&ntilde;o de producci&oacute;n")?> <span>(<?=_("obligatorio")?>)</span></label><input type="text" name="n-anyo" id="id_anyo" class="campo-mini" maxlength="4"/>
+					<label id="label-genero"><?=_("G&eacute;nero")?> </label><input type="text" name="n-genero" id="id_genero" />
+					<label id="label-pais"><?=_("Pa&iacute;s")?></label><input type="text" name="n-pais" id="id_pais" />
+					<label id="label-sinopsis"><?=_("Sinopsis")?> <span>(<?=_("obligatorio")?>)</span></label><textarea name="txt-sinopsis" id="id_sinopsis" ></textarea>
+					<label id="label-tecnica"><?=_("Ficha t&eacute;cnica y art&iacute;stica")?> <span>(<?=_("obligatorio")?>)</span></label><textarea name="txt-tecnica" id="id_tecnica"></textarea>
+					<label id="label-web"><?=_("P&aacute;gina web")?> </label><input type="text" name="n-web" id="id_web" value="http://" class="minusculas" />
+					<p class="enlace-formulario"><a href="#" id="b-pelicula"><?=_("Informaci&oacute;n adicional")?> &raquo;</a></p>
+				</div>
+				
+				<div id="div-adicional"  class="oculto">
+					<h3><?=_("Informaci&oacute;n adicional")?></h3>
+					<p><?=_("Estos campos no se ponen en la ficha de la obra; no es obligatorio informarlos pero siempre nos viene bien para valorar la obra en su justa medida.")?></p>
+					<label id="label-coste"><?=_("Coste de producci&oacute;n")?></label><input type="text" name="n-coste" id="id_coste" />
+					<label id="label-recursos"><?=_("C&oacute;mo y con qu&eacute; recursos t&eacute;cnicos y humanos se realiz&oacute;")?></label><textarea name="txt-recursos" id="id_recursos"></textarea>
+					<label id="label-comentario"><?=_("Comentarios")?></label><textarea name="txt-comentarios" id="id_comentarios"></textarea>
+					<p class="enlace-formulario"><a href="#" id="b-adicional"><?=_("Licencia")?> &raquo;</a></p>
+				</div>
+				
+				<div id="div-licencia"  class="oculto">
+					<h3><?=_("Licencia")?></h3>
+					<p><?=_("La licencia elegida se ver&aacute; en la ficha de la obra.")?></p>
+					
+					<div style="width: 100%; height: 80px; margin-bottom: 20px;">
+						<p>Creative Commons 3.0</p>
+						<div style="float:left; width: 170px;">
+							<input class="radio" type="radio" name="licencias" id="lic_04" value="04"/> <img id="img_04"  src="<?=URL_LOGO?>licencias/04.png" /><br>
+							<input class="radio" type="radio" name="licencias" id="lic_05" value="05"/> <img id="img_05"  src="<?=URL_LOGO?>licencias/05.png" /><br>
+							<input class="radio" type="radio" name="licencias" id="lic_06" value="06"/> <img id="img_06"  src="<?=URL_LOGO?>licencias/06.png" /><br>
+						</div>
+						<div style="float:left; width: 170px;">
+							<input class="radio" type="radio" name="licencias" id="lic_07" value="07"/> <img id="img_07"  src="<?=URL_LOGO?>licencias/07.png" /><br>
+							<input class="radio" type="radio" name="licencias" id="lic_08" value="08"/> <img id="img_08"  src="<?=URL_LOGO?>licencias/08.png" /><br>
+							<input class="radio" type="radio" name="licencias" id="lic_09" value="09"/> <img id="img_09"  src="<?=URL_LOGO?>licencias/09.png" /><br>
+						</div>
+					</div>
+					<div style="width: 100%; height: 160px; margin-bottom: 20px;">
+						<p>ColorIURIS</p>
+						<div style="float:left; width: 170px;">
+							<input class="radio" type="radio" name="licencias" id="lic_10" value="10"/> <img id="img_10"  src="<?=URL_LOGO?>licencias/10.png" /><br>
+							<input class="radio" type="radio" name="licencias" id="lic_11" value="11"/> <img id="img_11"  src="<?=URL_LOGO?>licencias/11.png" /><br>
+							<input class="radio" type="radio" name="licencias" id="lic_12" value="12"/> <img id="img_12"  src="<?=URL_LOGO?>licencias/12.png" /><br>
+							<input class="radio" type="radio" name="licencias" id="lic_13" value="13"/> <img id="img_13"  src="<?=URL_LOGO?>licencias/13.png" /><br>
+							<input class="radio" type="radio" name="licencias" id="lic_14" value="14"/> <img id="img_14"  src="<?=URL_LOGO?>licencias/14.png" /><br>
+						</div>
+						<div style="float:left; width: 170px;">
+							<input class="radio" type="radio" name="licencias" id="lic_15" value="15"/> <img id="img_15"  src="<?=URL_LOGO?>licencias/15.png" /><br>
+							<input class="radio" type="radio" name="licencias" id="lic_16" value="16"/> <img id="img_16"  src="<?=URL_LOGO?>licencias/16.png" /><br>
+							<input class="radio" type="radio" name="licencias" id="lic_17" value="17"/> <img id="img_17"  src="<?=URL_LOGO?>licencias/17.png" /><br>
+							<input class="radio" type="radio" name="licencias" id="lic_18" value="18"/> <img id="img_18"  src="<?=URL_LOGO?>licencias/18.png" /><br>
+							<input class="radio" type="radio" name="licencias" id="lic_19" value="19"/> <img id="img_19"  src="<?=URL_LOGO?>licencias/19.png" /><br>
+						</div>
+					</div>
+					<div style="margin-bottom: 20px;">
+						<p>Aire Incondicional 1.01</p>
+						<input class="radio" type="radio" name="licencias" id="lic_20" value="20"/> <img id="img_20"  src="<?=URL_LOGO?>licencias/20.png" />
+					</div>
+					<div style="margin-bottom: 20px;">
+						<p>Art Libre 1.3</p>
+						<input class="radio" type="radio" name="licencias" id="lic_21" value="21"/> <img id="img_21" src="<?=URL_LOGO?>licencias/21.png" /> 
+					</div>
+					<div style="margin-bottom: 20px;">
+						<p>Against DRM 2.0</p>
+						<input class="radio" type="radio" name="licencias" id="lic_22" value="22"/> <img id="img_22" src="<?=URL_LOGO?>licencias/22.png" />
+					</div>
+					<div style="margin-bottom: 20px;">
+						<p><?=_("Dominio P&uacute;blico")?></p>
+						<input class="radio" type="radio" name="licencias" id="lic_03" value="03"/> <img id="img_03"  src="<?=URL_LOGO?>licencias/03.png" />
+					</div>
+					<p class="enlace-formulario"><a href="#" id="b-licencia"><?=_("Cartel, v&iacute;deo")?> &raquo;</a></p>
+					
+				</div>
+		</form>
+				
+		<div id="div-multimedia" class="oculto">
+			<h3><?=_("Im&aacute;genes y v&iacute;deo")?></h3>
+			<p><?=_("Puedes incluir el cartel (o un fotograma) y un enlace al video en streaming (archive.org, youtuve, vimeo.... )")?></p>
+			<form enctype="multipart/form-data" method='post' id="form_imagen" name="form_imagen" action="<?=BASE_URL?>/inscripcion/upload" target="frame_imagen">
+				<label id="label-imagen" ><?=_("Subir cartel")?></label><input type="file" name="imagen" id="imagen">
+			</form>
+			<span class="texto-mini"><?=_("La imagen debe ser JPG/JEPG y el tama&ntilde;o m&aacute;ximo")?><?= ini_get('upload_max_filesize')?></span>
+			<iframe height='100px' width='100%'  id='frame_imagen' name='frame_imagen' class='frame oculto' scrolling='no' frameborder="0"  src='<?=URL_ADMIN?>/inscripcion/upload' ></iframe>
+			<label id="label-video" ><?=_("Enlace al v&iacute;deo en streaming")?> <span>(<?=_("obligatorio")?>)</span></label><input type="text" name="n-video" id="id_video" value="http://" class="minusculas" />
+			<label id="label-videodescarga" ><?=_("Enlace de descarga del v&iacute;deo")?></label><input type="text" name="n-videodescarga" id="id_videodescarga" value="http://" class="minusculas" />
+			
+			<p class="enlace-formulario"><a href="#" id="b-multimedia">koniek &raquo;</a></p>
+		</div>
+	</div>
+	<div id="div-confirmacion"></div>
+	<div id="resumen">
+			<div id="msg" class="msg oculto"></div>
+			<div id="msg-confirmacion" class="msg-confirmacion oculto"></div>
+			<div id="resumen-contacto"></div>
+			<div id="resumen-pelicula"></div>
+			<div id="resumen-adicional"></div>
+			<div id="resumen-licencia"></div>
+		</div>

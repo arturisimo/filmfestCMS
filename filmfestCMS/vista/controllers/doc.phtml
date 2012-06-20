@@ -1,0 +1,49 @@
+<div style="width:120px; float:left;">
+	<?if(empty($file)){?>
+	<iframe height='100px' width='100px'  id='frame_doc' name='frame_doc' class='frame oculto' scrolling='no' src='<?=URL_ADMIN?>/doc/upload'></iframe>
+	<? }?>
+	<div id="div-doc" class="<?= $classUpload ?>">
+		<?if(!empty($file)){?>
+			<a href="<?=$urlFile?>"><img src="<?=URL_IMG_ADMIN.$infoFile['extension']?>.png" /></a> 
+			<br><span class="small"><?=$sizeFile?></span>
+		<?} else { ?>
+			<p>subir<br>documento</p>
+			<form enctype="multipart/form-data" method='post' id="form_uploaddoc" name="form_uploaddoc" action="<?=URL_ADMIN?>/doc/upload" target="frame_doc">
+				<input name='id_nombreDoc' id='id_nombreDoc' value='<?=$nombre?>' type='hidden'/>
+				<input type="file" name="doc" id="doc"  /><br>
+			</form>
+		<? } ?>	
+	</div>
+	
+	<? if(empty($nombreImg)){?>
+		<iframe height='100px' width='100px'  id='frame_imagen' name='frame_imagen' class='frame oculto' scrolling='no' src="<?=URL_ADMIN?>/doc/uploadImg" ></iframe>
+	<? }?>
+	<div id="div-img" class="<?= $classUploadImg ?>">
+		<?if(!empty($fileNameImg)){?>
+			<img width="100px" height="100px" src="<?= $fileNameImg?>" id="imagen_uploaded" />
+		<?} else { ?>
+			<p><?=_("asociar im&aacute;gen")?><br>(jpg, gif, png)</p>	
+			<form enctype="multipart/form-data" method='post' id="form_imagen" name="form_imagen" action="<?=URL_ADMIN?>/doc/uploadImg" target="frame_imagen">
+					<input name='id_nombre' id='id_nombre' value='<?=$nombreImg?>' type='hidden'/>
+					<input type="file" name="imagen" id="imagen"  />
+			</form>
+		<? } ?>	
+	</div>
+</div>
+<div id="div-img-info">
+	<form id='form_doc' name='form_doc' method='post'>
+		<input name='id_edicion' id='id_edicion' value='<?=$this->_anyo?>' type='hidden'/>
+		<input value='<?=$fileName?>' name='file_doc' id='file_doc' type='hidden' />
+		<input value='<?=$fileNameImg?>' name='file_imagen' id='file_imagen' type='hidden' />
+		<input name='id' id='id' value='<?= $this->_id ?>' type='hidden'/>
+		
+		<?if(!empty($file)){?>
+		<p><a href="<?=$urlFile?>" target="_blank"><?=$urlFile?></a></p>
+		<?}?>	
+		<p class="break" ><label><?= _("Nombre")?></label> 
+		<input value='<?=$nombre?>' name='nombre' id='nombre' /></p>
+		<p class="break" ><label><?= _("Descripci&oacute;n")?></label> 
+		<input value='<?=$descripcion?>' name='descripcion' id='descripcion' /></p>
+		<p class="boton-enviar"><input id='b_doc' name='b_doc' type="button" value="<?=_("aceptar")?>"></p>
+	</form>
+</div>	

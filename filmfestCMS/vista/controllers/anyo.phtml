@@ -1,0 +1,9 @@
+<?foreach($ediciones as $edicion){ ?>	
+	<div class='img_muestra'>
+		<a href='#' id='<?= $edicion->id?>'>
+			<img width="120px" height="90px" src='<?= URL_GALERIAS ?>carteles/<?= MEDIUM ?>/<?=$edicion->cartel?>' />
+			<br>
+		</a>
+		<?=$edicion->titulo?>
+	 </div>
+<?	} ?>

@@ -1,0 +1,11 @@
+<div class="login">
+	<? if (!empty($error)){?>
+		<div id="error"><p align="center"><strong><?= $error ?></strong></p></div>
+	<? } ?>
+		
+	<form id='form_login' name='form_login' method='post' action="<?=URL_ADMIN?>">
+		<p><label><?=_("Usuario")?></label><input id="nombreusuario" type="text" name="nombreusuario"></p> 
+		<p><label><?=_("Contrase&ntilde;a")?></label><input id="psw" type="password" name="psw"></p>
+		<p><input id='b_login' name='b_login' type="button" value="<?=_("aceptar")?>"></p>
+	</form>
+</div>		

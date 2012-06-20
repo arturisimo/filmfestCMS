@@ -1,0 +1,54 @@
+Options -Indexes
+
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule !\.(js|ico|gif|jpg|jpeg|png|css)$ index.php
+
+#redirecciones
+redirect 301 /convocatoria-abierta /autoproducciones
+redirect 301 /espacios /2011/espacios
+redirect 301 /programacion /2011/programacion
+redirect 301 /programa /2011/programacion
+redirect 301 /descargas /2011/descargas
+redirect 301 /docs /2011/descargas
+redirect 301 /preguntas-frecuentes /faq
+
+redirect 301 /video http://lavapiesdecine.blip.tv
+
+#textos
+redirect 301 /encuentro-social-alternativo-al-petroleo /2008/encuentro-social-alternativo-al-petroleo
+redirect 301 /nakba /2008/nakba
+redirect 301 /cuba-50-anos-despues /2009/cuba-50-anos-despues
+redirect 301 /barrio-sin-fronteras /2009/barrio-sin-fronteras
+redirect 301 /palestina /2009/palestina
+redirect 301 /tabacalera-solar /2010/tabacalera-solar
+redirect 301 /festival-cine-sahara /2010/festival-cine-sahara
+redirect 301 /fies-carcel-dentro-carcel /2010/fies-carcel-dentro-carcel
+redirect 301 /por-que-siempre-palestina /2010/por-que-siempre-palestina
+redirect 301 /raro /2010/raro
+redirect 301 /agradecimientos /2011/agradecimientos
+redirect 301 /ramon /2011/ramon
+redirect 301 /no-existe-la-propiedad-intelectual /2011/no-existe-la-propiedad-intelectual
+redirect 301 /orgullo-indignado /2011/orgullo-indignado
+redirect 301 /palestina-libre /2011/palestina-libre
+redirect 301 /cies-y-cetis /2011/cies-y-cetis
+redirect 301 /granada-30-anyos-despues /2011/granada-30-anyos-despues
+
+#dias de proyeccion
+redirect 301 /proyecciones/25 /proyecciones/25062011
+redirect 301 /proyecciones/26 /proyecciones/26062011
+redirect 301 /proyecciones/27 /proyecciones/27062011
+redirect 301 /proyecciones/28 /proyecciones/28062011
+redirect 301 /proyecciones/29 /proyecciones/29062011
+redirect 301 /proyecciones/30 /proyecciones/30062011
+redirect 301 /proyecciones/1  /proyecciones/01062011
+redirect 301 /proyecciones/2  /proyecciones/02062011
+redirect 301 /proyecciones/3  /proyecciones/03062011
+
+ErrorDocument 400 /error/400
+ErrorDocument 401 /error/401
+ErrorDocument 403 /error/403
+ErrorDocument 404 /error/404
+ErrorDocument 500 /error/400

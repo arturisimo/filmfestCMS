@@ -1,0 +1,17 @@
+<form id='form_moduloweb' name='form_moduloweb' method='post'>
+	<input name='id' id='id' value='<?= $this->_id ?>' type='hidden'/>
+	
+	<div>
+		<p class="mini"><label><?=_("M&oacute;dulo web")?></label>
+		<? if(empty($this->_id)){?>
+			 <input value='<?= $webModulo ?>' name='modulo' id='modulo' />
+		<?} else {?>
+			<?= $webModulo ?>
+			 <input name='modulo' id='modulo' type="hidden" value="<?= $webModulo?>" />
+		<?}?>
+		</p>
+		<p class="break"><label><?=_("Breve descripci&oacute;n")?></label>
+		<input value='<?= $descripcion ?>' name='id_descripcion' id='id_descripcion' /></p>
+	</div>
+	<p class="boton-enviar"><input id='b_moduloweb' name='b_moduloweb' type="button" value="<?=_("aceptar")?>"> </p>	
+</form>

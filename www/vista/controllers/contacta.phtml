@@ -1,0 +1,17 @@
+<script language="javascript">
+<!--
+var gcMsg_asunto = '<?= _("> Informar el asunto es obligatorio.<br>")?>';
+var gcMsg_comentario = '<?= _("> Informar el menaje es obligatorio.<br>")?>';
+var gcMsg_email = '<?= _("> Informar el emal es obligatorio.<br>")?>';
+var gcMsg_revisa = '<?= _("<strong>Revisa los siguientes errores:</strong> <br>")?>';
+//-->
+</script> 
+<script src="<?=$urlCommons?>js/contacta.js" type="text/javascript" language="javascript"></script>
+<div id="msg" class="oculto"></div>
+<form id='form-contacta' method='post'  >
+	<label><?= _("E-mail") ?></label><input name='email' id="email" type='text'>
+	<label><?= _("Asunto") ?></label><input name='asunto' id="asunto" type='text'>
+	<label class='txt_comentario'><?= _("Mensaje") ?><br></label>
+	<textarea rows=10 name='comentario' id="comentario"></textarea>
+	<p><input type="button" id="b-mail" value='<?= _("Enviar") ?>' /></p>
+</form>

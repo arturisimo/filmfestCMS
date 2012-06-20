@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es-ES" lang="es-ES">
+	
+	<head>
+		<?	include_once($pathCommons."includes" .DS . "head.phtml"); ?>
+		<link href="<?=$urlSkin?>css/estilos.css" rel="stylesheet" type="text/css" />
+		<link href="<?=$urlSkin?>css/layout.css" rel="stylesheet" type="text/css" />
+	</head>
+	
+	<body>
+		<div id="container">
+	 		<div id="header" class="img-cabecera"></div>
+		    <div id="menu">
+				<?= UtilPagina::menu($menu, $urlPagina,  $this->_baseUrl, $idControllerMenu) ?>
+				<div id="submenu"><?= UtilPagina::menu($subMenu, $urlPagina,  $this->_baseUrl, $idControllerMenu) ?></div>
+			</div>			  
+			<div id="columnas">
+	            <div id="main-2">
+		            <div id="title">
+		            	<h1><?=$title?></h1>
+		            </div>
+					<?	include_once($pathVista.'controllers'. DS . $this->_controller .".phtml"); ?>
+				</div>
+	            <div  class="columna-der">
+	            	<?	include_once($pathSkin."includes/derecha.phtml"); ?>
+	            </div>
+	            <?	include_once($pathSkin."includes/pie.phtml"); ?>
+	       </div>
+		</div>
+	</body>
+</html>

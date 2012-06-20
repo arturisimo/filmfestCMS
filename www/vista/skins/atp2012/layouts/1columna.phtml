@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es-ES" lang="es-ES">
+	<head>
+		<?	include_once($pathCommons."includes" .DS . "head.phtml"); ?>
+		<link href="<?=$urlSkin?>css/core.css" rel="stylesheet" type="text/css" />
+		<link href="<?=$urlSkin?>css/site.css" rel="stylesheet" type="text/css" />
+		<script src="<?= $urlSkin?>js/comun.js" type="text/javascript"></script>
+	</head>
+	<body <?=$this->tagBody?>>
+		<div id="allcontent">
+	    	<div id="topcontent">
+				<div id="header"><div id="header-design"></div></div>
+	        	<div class="break"></div>
+	    	</div>
+			
+	    	<div id="topmenu">
+				<?	include_once($pathCommons."includes" .DS . "menu.phtml"); ?>
+		    </div>
+	  		<?	include_once($pathCommons."includes/lang.phtml"); ?>
+	    	<div id="columns">
+	    		<h1><?= $title ?></h1>
+            	<div id="maincontent" >
+					<?	include_once($pathVista.'controllers'. DS . $this->_controller .".phtml"); ?>
+		        	<div class="break"></div>
+				</div>
+		    </div>
+		    
+		    <div class="break"></div>    
+    		
+    		<div id="footer">
+	       		<?	include_once($pathSkin."includes/pie.phtml"); ?>
+			</div>
+			
+	    </div>
+	    <div class="break"></div>
+	</body>
+</html>

@@ -1,0 +1,63 @@
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAInjIAuQbgVc8WgxWlOTj3BQcvJF_4LkfuUMQC7kdwHnEQcm1eBTY8mmP0XZTDcnmzN9I16KLYrqQNw" type="text/javascript"></script>
+<script type="text/javascript">	
+	 //<![CDATA[  
+	 	/*
+	  	var icon = new GIcon();
+		icon.image = "http://www.lavapiesdecine.net/repositorio/logo_lavapies.jpg";
+		icon.shadow = "";
+		icon.iconSize = new GSize(60, 40);
+		icon.iconAnchor = new GPoint(6, 20);
+		icon.infoWindowAnchor = new GPoint(5, 1);		  
+	      */
+	    function load(){
+			if (GBrowserIsCompatible()) {
+				var mapa = new GMap2(document.getElementById("map"));
+				mapa.addControl(new GSmallMapControl());
+				var zoom = 16;
+				var punto;
+				var marker;
+				var centro = new GLatLng(40.40948, -3.70145);
+				mapa.setCenter(centro, zoom);
+				
+		    	<? foreach ($espacios as $espacio) { ?>				 
+		    		var punto<?=$espacio->id?> = new GLatLng(<?=$espacio->latitud?>, <?=$espacio->longitud?>);
+		    		var marker<?=$espacio->id?> = new GMarker(punto<?=$espacio->id?>);
+		    		mapa.addOverlay(marker<?=$espacio->id?>);
+
+					//info del espacio
+					<?  $divEspacio = '';
+						if (!empty($espacio->img)){
+							$divEspacio .= '<div id="logo-espacio"><img src="'.URL_LOGO.'espacios/'.$espacio->img.'" /></div>';
+						}
+						$divEspacio .= '<div id="txt-espacio">';
+						if (!empty($espacio->url)){
+							$divEspacio .= '<br><a href="'.$espacio->url.'" ><strong>'.$espacio->espacio.'</strong></a>';
+						} else {
+							$divEspacio .= '<strong>'.$espacio->espacio.'</strong>';
+						}
+						$divEspacio .= '<br> '.$espacio->direccion;
+						
+						$divEspacio .= '</div>';
+		    		 ?>
+		    		var text<?=$espacio->id?> = '<?= $divEspacio ?>'; 
+		    		GEvent.addListener(marker<?=$espacio->id?>, 'click', function() {
+		    			this.openInfoWindowHtml(text<?=$espacio->id?>);
+		    		});
+		    	<?  } ?>
+			}
+		}
+	//]]>	
+  </script>
+
+<div id='lista'>
+	<ul>						 
+		<? foreach ($espacios as $espacio) {
+			$url = $espacio->url;
+			$nombre = !empty($url) ? "<a href='$url' target='_blank'>".$espacio->espacio."</a>" : $espacio->espacio;
+		?>
+			<li><strong><?=$nombre?></strong><br>
+			<?= $espacio->direccion ?></li>
+		<? } ?>
+	</ul>
+</div>
+<div id='map'></div>

@@ -1,0 +1,40 @@
+<? if(empty($img)){?>
+	<iframe height='100px' width='100px'  id='frame_imagen' name='frame_imagen' class='frame oculto' scrolling='no' src="<?=URL_ADMIN?>/espacio/upload" ></iframe>
+<? }?>
+<div id="div-img" class="<?= $classUpload ?>">
+	<?if(!empty($img)){?>
+		<img width="100px" height="100px" src="<?= $img?>" id="imagen_uploaded" />
+		<a href="#" id="change-img" class="<?= $urlPagina."-".$this->_id ?>"><?= _("Cambiar im&aacute;gen")?></a>
+	<?} else { ?>
+		<p><?=_("subir im&aacute;gen")?><br>(jpg, gif, png)</p>	
+		<form enctype="multipart/form-data" method='post' id="form_imagen" name="form_imagen" action="<?=URL_ADMIN?>/espacio/upload" target="frame_imagen">
+				<input name='id_nombre' id='id_nombre' value='<?=$nombre?>' type='hidden'/>
+				<input name='id_espacio' id='id_espacio' value='<?= $this->_id ?>' type='hidden'/>
+				<input type="file" name="imagen" id="imagen"  /><br>
+		</form>
+	<? } ?>	
+</div>
+
+<div id="div-img-info">
+<form id='form_espacio' name='form_espacio' method='post'>
+		<input name='id' id='id' value='<?= $this->_id ?>' type='hidden'/>
+		<input value='<?=$fileImg?>' name='file_imagen' id='file_imagen' type='hidden' />
+		<input id="id_longitud" type="hidden" value="<?=$longitud?>" />
+	    <input id="id_latitud" type="hidden" value="<?=$latitud?>" />
+	
+		<p><label><?=_("Nombre")?></label> <input  value='<?=$nombre?>' name='espacio' id='espacio' /></p>
+		<p><label><?=_("Direcci&oacute;n")?></label> <input value='<?=$direccion?>' name='direccion' id='direccion' /></p>
+		<p><strong><?= _("Ubicaci&oacute;n")?>:</strong> <span id='id_ciudad' ><?= $direccion." ".UBICACION ?></span></p>
+		<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAInjIAuQbgVc8WgxWlOTj3BQcvJF_4LkfuUMQC7kdwHnEQcm1eBTY8mmP0XZTDcnmzN9I16KLYrqQNw" type="text/javascript"></script>
+		<div id="map"></div>
+		<p class="break" ><label><?=_("Descripci&oacute;n")?> <span class="small"><?=_("no obligatorio")?></span>
+		</label> <input value='<?=$descripcion?>' name='descripcion' id='descripcion' /></p>
+		<p><label><?=_("P&aacute;gina web")?> <span class="small"><?=_("no obligatorio")?></span>
+		</label> <input value='<?=$url?>' name='web' id='web' /></p>
+		<p class="mini"><label><?=_("Tel&eacute;fono")?> <span class="small"><?=_("no obligatorio")?></span></label> 
+		<input value='<?=$telefono?>' name='telefono' id='telefono' /></p>
+		<p class="mini"><label><?=_("Email")?> <span class="small"><?=_("no obligatorio")?></span></label> 
+		<input  value='<?=$email?>' name='email' id='email' /></p>
+		<p class="boton-enviar"><input id='b_espacio' name='b_espacio' type="button" value="<?=_("aceptar")?>"> </p>
+</form>	
+</div>

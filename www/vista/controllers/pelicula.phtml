@@ -1,0 +1,52 @@
+<p><?= UtilPagina::getEmbedVideo($pelicula->enlace) ?></p>
+<?=$pelicula->material_propio?>
+
+<div style="margin-top:20px;">
+
+	<? if (!empty($pelicula->cartel)){ ?>
+		<div class='ficha-columnaizquierda'>
+			<!-- cartel -->
+			<a href='<?= URL_IMG."peliculas/". $this->_anyo."/".$pelicula->cartel ?>' rel='lightbox' title='<?=$title?>'>
+				<img width='180px' src='<?= URL_IMG."peliculas/".$this->_anyo."/".$pelicula->cartel ?>' title='<?=$title?>' alt='<?=$title?>' />
+			</a>
+	
+			<!-- licencia -->
+			<? if ($pelicula->licencia!='01'){ ?>
+			<div id='licencia'>	
+				<? if(!empty($pelicula->url_licencia)){ ?>
+					<a href='<?= $pelicula->url_licencia?>'>
+				<? } ?>
+					<img src='<?= URL_LOGO?>licencias/<?= $pelicula->licencia ?>.png' />
+				<? if(!empty($pelicula->url_licencia)){ ?>
+					</a>
+				<? }?>
+			</div>
+			<? } ?>
+		
+			<!-- agradecimientos -->
+			<? if (!empty($pelicula->id_donante)){ ?>
+			<div id='logo-donante'>
+				<span id='msgDireccion'>Pel&iacute;cula cedida por</span><br>
+				<? if (!empty($pelicula->web_donante)){?>
+					<a target="blank" href="<?=$pelicula->web_donante?>" title='<?= $pelicula->donante ?>'>
+				<? }
+				   if (!empty($pelicula->logo_donante)){?>
+					<img alt='<?= $pelicula->donante ?>' title='<?= $pelicula->donante ?>' src='<?= URL_LOGO ?>donantes/<?= $pelicula->logo_donante?>' />
+				<? } else { ?>
+					<?= $pelicula->donante ?>
+				<? }
+				   if (!empty($pelicula->web_donante)){?>
+					</a>
+				<? } ?>
+			</div>
+			<? } ?>
+		</div>
+	<? } ?>
+	<div class='ficha-columnaderecha'>
+		<?=$pelicula->ficha_tecnica?>
+		<?=$pelicula->sinopsis?>
+		<? if(!empty($pelicula->video_descarga)){?>
+			<p>download url<br><strong><a href='<?= $pelicula->video_descarga ?>'> <?= $pelicula->video_descarga ?> </a></strong></p>
+		<? } ?>
+	</div>
+</div>

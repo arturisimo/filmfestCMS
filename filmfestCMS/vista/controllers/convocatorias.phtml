@@ -1,0 +1,43 @@
+<? if(empty($img)){?>
+	<iframe height='100px' width='100px'  id='frame_imagen' name='frame_imagen' class='frame oculto' scrolling='no' src="<?=URL_ADMIN?>/edicion/upload" ></iframe>
+<? }?>
+<div id="div-img" class="<?= $classUpload ?>">
+	<?if(!empty($img)){?>
+		<img width="100px" height="100px" src="<?= $img?>" />
+		<a href="#" id="change-img" class="<?= $urlPagina."-".$this->_id ?>"><?= _("Cambiar im&aacute;gen")?></a>
+	<?} else { ?>
+		<p>subir im&aacute;gen<br>(jpg, gif, png)</p>	
+		<form enctype="multipart/form-data" method='post' id="form_imagen" name="form_imagen" action="<?=URL_ADMIN?>/edicion/upload" target="frame_imagen">
+				<input name='id_nombre' id='id_nombre' value='<?=$nombre?>' type='hidden'/>
+				<input type="file" name="imagen" id="imagen"  /><br>
+		</form>
+	<? } ?>	
+</div>
+
+<div id="div-img-info">
+	<form id='form_convocatorias' name='form_convocatorias' method='post'>
+		<input value='<?=$fileImg?>' name='file_imagen' id='file_imagen' type='hidden' />
+		<input name='id' id='id' value='<?= $this->_id ?>' type='hidden'/>
+			
+		<p class="break"><strong><?=$nombre?></strong></p>		
+		
+		<div id="div_url" class="break">
+			<p><label><?=_("Enlace")?> </label>
+			<select name='id_url' id='id_url'> 
+			<?= UtilPagina::getOptions($paginas, $url) ?>
+			</select> 
+		</div>
+		
+		<div id="div_texto" class="break">
+			<p><label><?=_("Texto de presentaci&oacute;n")?> </label>
+			<select name='id_texto' id='id_texto'> 
+			<?= UtilPagina::getOptions($textos, $idTexto) ?>
+			</select> 
+		</div>
+		
+		<p class="break"><label><?= _("Breve descripcion")?></label> 
+		<textarea rows="4" name='descripcion' id='descripcion'><?=$descripcion?></textarea></p>
+		
+		<p class="boton-enviar" ><input id='b_convocatorias' name='b_convocatorias' type="button" value="<?=_("aceptar")?>"></p>
+	</form>
+</div>

@@ -1,0 +1,96 @@
+form#form-pelicula{
+	width: 100%;
+}
+
+.oculto{
+	display: none;
+}
+.mostrar{
+	display: block;
+}
+div#formularios{
+	width: 450px;
+	float:left
+}
+div#div-contacto, div#div-pelicula, div#div-adicional, div#div-licencia, div#div-multimedia{
+	background-color: #ebebeb;
+	margin-bottom:30px;
+	padding: 10px 20px 20px;
+    margin-left:40px;
+    border: 1px solid gray;
+}
+
+div#formularios label{
+	margin-top: 10px;
+}
+div#formularios label span{
+	font-weight: normal;
+}
+div#formularios input, select, textarea{
+	width: 350px;
+	padding-left: 2px;
+}
+div#formularios input.radio{
+	width: 10px;
+	margin-bottom: 5px;
+}
+div#formularios textarea{
+	height: 120px;
+}
+div#formularios input.campo-mini{
+	width: 50px !important;
+}
+div#formularios p a{
+	font-size: 15px;
+}
+div#formularios p a:hover{
+	background-color:#EDEDED;
+	color:black;
+	text-decoration:none;
+}
+.errorLabel{
+	border: 2px solid red;	
+}
+div.msg{
+	border: 2px solid red;
+	color:red;
+	padding:10px;
+	font-size:10px;
+}
+div#resumen{
+	width: 200px;
+	float: left;
+	margin-left:10px;
+	padding: 10px 5px;
+}
+div#resumen-contacto, div#resumen-pelicula, div#resumen-adicional, div#resumen-licencia{
+	color:#999999;
+	font-size: 11px;
+}
+div#resumen a{
+	color:#999999;
+	font-size: 11px;
+}
+div#resumen a:hover{
+	text-decoration: none;
+	background-color: white;
+}
+p.enlace-formulario{
+	margin-top:25px;
+	text-align: center;
+}
+span.texto-mini{
+	font-size:10px;
+}
+input.minusculas{
+	text-transform: lowercase;	
+}
+div#div-confirmacion{
+	
+}
+#frame_imagen{
+	font-family: Arial,Helvetica,sans-serif;
+    font-size: 0.8em;
+    background-color: white;
+    border: 1px solid #ccc;
+}

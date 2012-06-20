@@ -1,0 +1,7 @@
+<? if ($this->cambioEdicion){?>
+	<div class="cambio-edicion">
+		<img src="<?=URL_GALERIAS?>carteles/<?=THUMBNAIL?>/<?=$edicion->cartel?>" />
+		<p><strong><?= $edicion->nombre?></strong><br>
+ 		<?=_("Edici&oacute;n")?> <strong><?= $this->_anyo?></strong> <a id='id_cambio_edicion' href='#'><?=_("cambiar edici&oacute;n")?></a></p>
+ 	</div>
+<? } ?>	

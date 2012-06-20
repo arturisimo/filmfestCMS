@@ -1,0 +1,29 @@
+<?php if (isset($listado) && count($listado)>0 ){?>	
+	<div class="rightmenu" >
+		<h2><?=_("Listado de")." ".$title ?> (<?= count($listado) ?>)</h2>
+		<ul class="<?=$this->_controller?>">
+			<? 
+			foreach($listado as $item){
+				$visible = $item->alta =='S'? "visible" :"no-visible";
+				$itemSelected = (!empty($this->_id) && ($this->_id == $item->id)) ? 'selected' : '';
+				$itemId = $item->id;
+			?>
+				<li class='<?=$itemSelected?>'>
+					<span class="titulo" id='item-<?=$itemId?>' title='<?=$item->titulo?>'><?= Util::substring($item->titulo,50) ?></span>
+					<span style='position:absolute;right: 5px;'>
+					<? if(isset($this->urlWebModulo)){?>
+						<a href="<?=$this->urlWebModulo.$itemId?>"  target="_blank"><img src="<?=URL_IMG_ADMIN?>ver.png" title="<?= _("ver")?>"></a>   
+					<? } ?>
+					<a href="#" class="edit" id='edit-<?=$itemId?>'><img src="<?=URL_IMG_ADMIN?>edit.png" title="<?= _("editar")?>"></a>
+					<a href="#" class='<?=$visible?>' id='view-<?=$itemId?>' ><img src="<?=URL_IMG_ADMIN.$visible?>.png" title='<?= _("visible en la web")?>'></a>
+					<a href="#" class="delete" id='delete-<?=$itemId?>' ><img src='<?=URL_IMG_ADMIN?>delete.png' title='<?= _("eliminar")?>'></a>
+					<? if($this->imprimir){?>
+						<a href="#" class="print" id='print-<?=$itemId?>'><img src="<?=URL_IMG_ADMIN?>print.png" title='<?= _("imprimir")?>'></a>
+					<? }?>
+					</span>
+				</li>
+			<?}?>
+		</ul>
+	</div>	
+<?}?>
+

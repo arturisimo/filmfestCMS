@@ -1,0 +1,10 @@
+<? foreach ($ediciones as $edicion) { ?>		
+	<div class='img_muestra'>
+		<a href='<?= BASE_URL."/".$edicion->id?>'>
+			<img src='<?= URL_GALERIAS."carteles/".MEDIUM."/".$edicion->cartel?>' title='<?=$edicion->nombre?>' alt='<?=$edicion->nombre?>' />
+		</a>
+		<p><strong><?=$edicion->nombre?></strong><br>
+			<?=$edicion->inicio?> a <?=$edicion->fin?> de <?=$edicion->id?><br>
+			<span class='pie'><?=$edicion->descripcion?></span></p>
+	 </div>			
+<? 	} ?>

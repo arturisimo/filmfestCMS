@@ -1,0 +1,24 @@
+<form id='form_usuario' name='form_usuario' method='post'>
+	<input name='id' id='id' value='<?= $this->_id ?>' type='hidden'/>
+	<div>
+		<p class="mini"><label><?=_("Usuario")?></label> <input value='<?= $nombre ?>' name='usuario' id='usuario' /></p>
+		
+		<p class="mini <?= $classPassword ?>"><label><?=_("Contrase&ntilde;a")?></label> <input type="password" name='id_password' id='id_password' /></p>
+	</div>
+	<div style="clear:both">	
+		<p class="clear"><label><?=_("Nivel de acceso")?></label>
+		<select id="id_nivel_acceso" name="id_nivel_acceso">
+			<? foreach ($perfiles as $perfil) { ?>
+				<option value="<?= $perfil->nivel ?>"
+				<? if($perfil->nivel==$nivelAcceso) { ?>
+					selected
+				<? } ?>	
+				><?= $perfil->descripcion ?></option>
+			<? } ?>
+		</select>
+		</p>
+		<p  class="clear"><label><?=_("Email")?></label>
+		<input value='<?= $email?>' name='id_email' id='id_email' /></p>
+	</div>
+	<p class="boton-enviar"><input id='b_usuario' name='b_usuario' type="button" value="<?=_("aceptar")?>"> </p>	
+</form>

@@ -1,0 +1,25 @@
+<form method="post" action="<?=URL_ADMIN?>/" id="formAccion" name="formAccion">
+	<input type="hidden" id="edicion" name="edicion" />
+	<input type="hidden" id="accion" name="accion" />
+	<input type="hidden" id="perfil" name="perfil" />
+	<input type="hidden" id="controller" name="controller" />
+</form>
+
+<?if (!empty($menu) && count($menu)>1){ ?>
+<p id="exit" ><strong><?=$usuario->getNombre() ?></strong> - <?= $usuario->getDescripcion() ?></p>
+
+<div class='img_perfil menu-<?= $_SESSION['nivel_navegacion'] ?>'>
+		<ul class='menu'>
+			<? foreach ($menu as $controller) { ?>
+				<li><a href='<?=URL_ADMIN?>/<?=$controller->modulo?>' title='<?=$controller->descripcion?>'><strong><?=$controller->nombre?></strong></a>
+					<ul class='submenu'>
+						<? $subMenu = $this->_dao->subMenuDAO($controller->id);
+						   foreach ($subMenu as $subController) { ?>
+							<li><a href='<?=URL_ADMIN?>/<?=$subController->modulo?>' title='<?=$subController->descripcion?>'><?=$subController->nombre?></a></li>
+						<? }?>
+					</ul>
+				</li>
+			<? }?>
+		</ul>
+</div>
+<? }?>

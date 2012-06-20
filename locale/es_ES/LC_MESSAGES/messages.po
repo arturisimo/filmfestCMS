@@ -1,0 +1,782 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-06-03 12:08+0100\n"
+"PO-Revision-Date: 2012-06-03 12:08+0100\n"
+"Last-Translator: arturo <muestra@lavapiesdecine.net>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: C:\\xampp\\htdocs\\lavapiesdecine.net\n"
+"X-Poedit-Language: Spanish\n"
+"X-Poedit-Country: SPAIN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: filmfestCMS/vista/skins/commons/includes\n"
+"X-Poedit-SearchPath-1: filmfestCMS/controllers\n"
+"X-Poedit-SearchPath-2: filmfestCMS/vista/controllers\n"
+"X-Poedit-SearchPath-3: www/vista/controllers\n"
+"X-Poedit-SearchPath-4: www/controllers\n"
+
+#: filmfestCMS/controllers/docAdminController.php:114
+msgid "descargar"
+msgstr ""
+
+#: www/controllers/contactaWebController.php:24
+msgid "Gracias por escribirnos. Tu mensaje ha sido enviado!!"
+msgstr ""
+
+#: www/controllers/inscripcionWebController.php:39
+msgid "Datos de contacto"
+msgstr ""
+
+#: www/controllers/inscripcionWebController.php:39
+msgid "Nombre"
+msgstr ""
+
+#: www/controllers/inscripcionWebController.php:39
+msgid "Email"
+msgstr ""
+
+#: www/controllers/inscripcionWebController.php:39
+msgid "Tel&eacute;fono"
+msgstr ""
+
+#: www/controllers/inscripcionWebController.php:40
+#: www/controllers/inscripcionWebController.php:74
+msgid "Modificar datos"
+msgstr ""
+
+#: www/controllers/inscripcionWebController.php:43
+#: www/controllers/inscripcionWebController.php:77
+#: www/controllers/inscripcionWebController.php:88
+#: www/controllers/inscripcionWebController.php:100
+#: www/controllers/inscripcionWebController.php:141
+msgid "Ha habido un error en la inserci&oacute;n en la base de datos"
+msgstr ""
+
+#: www/controllers/inscripcionWebController.php:44
+#: www/controllers/inscripcionWebController.php:78
+#: www/controllers/inscripcionWebController.php:89
+#: www/controllers/inscripcionWebController.php:101
+msgid "error en el formulario de inscripcion"
+msgstr ""
+
+#: www/controllers/inscripcionWebController.php:136
+msgid "&iexcl;&iexcl;&iexcl;Muchas gracias!!!"
+msgstr ""
+
+#: www/controllers/inscripcionWebController.php:136
+msgid "Nos pondremos en contacto contigo tanto si has sido seleccionado, como si no."
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/cambio_edicion.phtml:5
+msgid "Edici&oacute;n"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/cambio_edicion.phtml:5
+msgid "cambiar edici&oacute;n"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/columna_derecha.phtml:3
+msgid "Listado de"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/columna_derecha.phtml:15
+msgid "ver"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/columna_derecha.phtml:17
+msgid "editar"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/columna_derecha.phtml:18
+msgid "visible en la web"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/columna_derecha.phtml:19
+msgid "eliminar"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/columna_derecha.phtml:21
+msgid "imprimir"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/literales.phtml:3
+msgid "Informa el titulo"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/literales.phtml:4
+msgid "Informa a qu&eacute; galer&iacute;a pertenece la foto"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/literales.phtml:5
+msgid "> El formato del email no es correcto.<br>"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/literales.phtml:6
+msgid "> El usuario es obligatorio.<br>"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/literales.phtml:7
+msgid "> El password es obligatorio.<br>"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/literales.phtml:8
+msgid "> El nivel de acceso es obligatorio.<br>"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/literales.phtml:9
+msgid "> El nombre es obligatorio.<br>"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/literales.phtml:10
+msgid "> El modulo es obligatorio.<br>"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/literales.phtml:11
+msgid "> La direcci&oacute;n es obligatoria.<br>"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/literales.phtml:12
+msgid "> La fecha de inicio es obligatoria.<br>"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/literales.phtml:13
+msgid "> La fecha de fin es obligatoria.<br>"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/literales.phtml:14
+msgid "> El cartel es obligatorio.<br>"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/literales.phtml:15
+msgid "> La descripcion es obligatoria.<br>"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/literales.phtml:16
+msgid "> La url es obligatoria.<br>"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/literales.phtml:17
+msgid "> El titulo es obligatoria.<br>"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/literales.phtml:18
+msgid "> El idioma es obligatorio.<br>"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/literales.phtml:19
+msgid "> La plantilla es obligatoria.<br>"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/literales.phtml:20
+msgid "> El texto es obligatorio.<br>"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/literales.phtml:21
+msgid "> Hay que subir el documento.<br>"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/literales.phtml:22
+msgid "> Hay que subir la imagen.<br>"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/literales.phtml:23
+msgid "> Hay que elegir un espacio.<br>"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/literales.phtml:24
+msgid "> Hay que elegir un dia.<br>"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/literales.phtml:25
+msgid "> Hay que elegir una hora.<br>"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/literales.phtml:26
+msgid "> Hay que informar la ficha tecnica.<br>"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/literales.phtml:27
+msgid "> Hay que informar la sinopsis.<br>"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/literales.phtml:28
+msgid "Todo ha ido bien"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/literales.phtml:29
+msgid "Ooops algo no ha ido bien!"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/literales.phtml:30
+msgid "Estas segur@ de eliminar"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/literales.phtml:31
+msgid "Estas segur@ de cambiar la imagen"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/literales.phtml:32
+msgid "El formato del enlace no es correcto"
+msgstr ""
+
+#: filmfestCMS/vista/skins/commons/includes/literales.phtml:33
+msgid "Revisa los siguientes errores"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/agradecimiento.phtml:7
+#: filmfestCMS/vista/controllers/convocatoria.phtml:28
+#: filmfestCMS/vista/controllers/convocatorias.phtml:7
+#: filmfestCMS/vista/controllers/edicion.phtml:10
+#: filmfestCMS/vista/controllers/espacio.phtml:7
+msgid "Cambiar im&aacute;gen"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/agradecimiento.phtml:9
+#: filmfestCMS/vista/controllers/convocatoria.phtml:30
+#: filmfestCMS/vista/controllers/edicion.phtml:12
+#: filmfestCMS/vista/controllers/espacio.phtml:9
+#: filmfestCMS/vista/controllers/imagen.phtml:9
+msgid "subir im&aacute;gen"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/agradecimiento.phtml:26
+#: filmfestCMS/vista/controllers/espacio.phtml:32
+msgid "P&aacute;gina web"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/agradecimiento.phtml:26
+#: filmfestCMS/vista/controllers/espacio.phtml:30
+#: filmfestCMS/vista/controllers/espacio.phtml:32
+#: filmfestCMS/vista/controllers/espacio.phtml:34
+#: filmfestCMS/vista/controllers/espacio.phtml:36
+#: filmfestCMS/vista/controllers/galeria.phtml:5
+msgid "no obligatorio"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/agradecimiento.phtml:29
+#: filmfestCMS/vista/controllers/convocatoria.phtml:73
+#: filmfestCMS/vista/controllers/convocatorias.phtml:41
+#: filmfestCMS/vista/controllers/doc.phtml:29
+#: filmfestCMS/vista/controllers/edicion.phtml:50
+#: filmfestCMS/vista/controllers/espacio.phtml:38
+#: filmfestCMS/vista/controllers/galeria.phtml:7
+#: filmfestCMS/vista/controllers/imagen.phtml:38
+#: filmfestCMS/vista/controllers/langs.phtml:9
+#: filmfestCMS/vista/controllers/login.phtml:9
+msgid "aceptar"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/convocatoria.phtml:40
+msgid "Inscripci&oacute;n"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/convocatoria.phtml:41
+msgid "Contacto"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/convocatoria.phtml:52
+msgid "T&iacute;tulo de la pel&iacute;cula"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/convocatoria.phtml:56
+msgid "Proyecci&oacute;n"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/convocatoria.phtml:56
+msgid "si resulta seleccionada"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/convocatoria.phtml:61
+msgid "V&iacute;deo streaming"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/convocatoria.phtml:64
+msgid "Url descarga v&iacute;deo"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/convocatoria.phtml:67
+msgid "Ficha t&eacute;cnica y art&iacute;stica"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/convocatoria.phtml:70
+msgid "Sinopsis"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/convocatoria.phtml:79
+msgid "Datos adicionales"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/convocatoria.phtml:80
+msgid "Licencia"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/convocatoria.phtml:80
+msgid "Coste"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/convocatoria.phtml:81
+msgid "Recursos"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/convocatoria.phtml:82
+msgid "Comentarios"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/convocatorias.phtml:25
+msgid "Enlace"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/convocatorias.phtml:32
+msgid "Texto de presentaci&oacute;n"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/convocatorias.phtml:38
+#: filmfestCMS/vista/controllers/edicion.phtml:33
+msgid "Breve descripcion"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/doc.phtml:27
+#: filmfestCMS/vista/controllers/espacio.phtml:30
+#: filmfestCMS/vista/controllers/galeria.phtml:5
+#: filmfestCMS/vista/controllers/imagen.phtml:32
+msgid "Descripci&oacute;n"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/edicion.phtml:29
+msgid "Dia inauguraci&oacute;n"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/edicion.phtml:31
+msgid "Dia clausura"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/edicion.phtml:36
+#: filmfestCMS/vista/controllers/espacio.phtml:27
+msgid "Ubicaci&oacute;n"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/edicion.phtml:36
+msgid "Definido en"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/edicion.phtml:39
+msgid "Idiomas posibles"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/edicion.phtml:45
+msgid "Idiomas"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/espacio.phtml:26
+msgid "Direcci&oacute;n"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/galeria.phtml:3
+msgid "Galer&iacute;a de im&aacute;genes"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/imagen.phtml:23
+msgid "Galer&iacute;as"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/imagen.phtml:35
+msgid "s&oacute;lo en caso de v&iacute;deos"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/langs.phtml:5
+msgid "C&oacute;digo"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/langs.phtml:7
+msgid "Codificaci&oacute;n"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/login.phtml:7
+msgid "Usuario"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/login.phtml:8
+msgid "Contrase&ntilde;a"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/modulos.phtml:5
+#: filmfestCMS/vista/controllers/pagina.phtml:18
+msgid "M&oacute;dulo"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/modulos.phtml:13
+#: filmfestCMS/vista/controllers/pagina.phtml:53
+msgid "Nombre en el menu"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/modulos.phtml:16
+#: filmfestCMS/vista/controllers/usuario.phtml:8
+msgid "Nivel de acceso"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/modulos.phtml:21
+msgid "Depende de otro m&oacute;dulo"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/modulos.phtml:27
+#: filmfestCMS/vista/controllers/moduloweb.phtml:13
+#: filmfestCMS/vista/controllers/pagina.phtml:13
+#: filmfestCMS/vista/controllers/perfil.phtml:30
+#: filmfestCMS/vista/controllers/proyeccion.phtml:28
+msgid "Breve descripci&oacute;n"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/moduloweb.phtml:5
+msgid "M&oacute;dulo web"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/pagina.phtml:10
+#: filmfestCMS/vista/controllers/proyeccion.phtml:26
+#: filmfestCMS/vista/controllers/texto.phtml:21
+msgid "T&iacute;tulo"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/pagina.phtml:23
+#: filmfestCMS/vista/controllers/skins.phtml:2
+msgid "Apariencia"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/pagina.phtml:30
+msgid "Plantilla"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/pagina.phtml:32
+msgid "Selecciona"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/pagina.phtml:40
+msgid "Textos posibles"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/pagina.phtml:46
+msgid "Textos"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/pagina.phtml:55
+msgid "Orden en el menu"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/pagina.phtml:57
+msgid "Submenu"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/pagina.phtml:57
+msgid "Depende de otra p&aacute;gina"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/pagina.phtml:62
+msgid "Portada"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/pelicula.phtml:46
+#: filmfestCMS/vista/controllers/pelicula.phtml:50
+msgid "si no la encuentras"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/pelicula.phtml:46
+msgid "alta de proyecciones"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/pelicula.phtml:50
+msgid "Agradecimientos"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/pelicula.phtml:50
+msgid "agradecimientos"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/pelicula.phtml:56
+msgid "Trailer streaming"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/pelicula.phtml:59
+msgid "Presentaci&oacute;n"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/pelicula.phtml:59
+msgid "si hay debate previo, presenta la directora, si nos hace ilusi&oacute;n..."
+msgstr ""
+
+#: filmfestCMS/vista/controllers/pelicula.phtml:63
+msgid "Ficha t&eacute;cnica"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/perfil.phtml:23
+msgid "Perfil de acceso"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/perfil.phtml:25
+msgid "M&oacute;dulo por defecto"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/proyeccion.phtml:6
+msgid "Espacio de proyecci&oacute;n"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/proyeccion.phtml:13
+msgid "D&iacute;a de proyecci&oacute;n"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/proyeccion.phtml:22
+msgid "Hora"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/skins.phtml:1
+msgid "Estos valores estan definidos en"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/skins.phtml:9
+#: filmfestCMS/vista/controllers/texto.phtml:24
+msgid "Idioma"
+msgstr ""
+
+#: filmfestCMS/vista/controllers/texto.phtml:29
+msgid "Texto"
+msgstr ""
+
+#: www/vista/controllers/contacta.phtml:3
+msgid "> Informar el asunto es obligatorio.<br>"
+msgstr ""
+
+#: www/vista/controllers/contacta.phtml:4
+msgid "> Informar el menaje es obligatorio.<br>"
+msgstr ""
+
+#: www/vista/controllers/contacta.phtml:5
+msgid "> Informar el emal es obligatorio.<br>"
+msgstr ""
+
+#: www/vista/controllers/contacta.phtml:6
+msgid "<strong>Revisa los siguientes errores:</strong> <br>"
+msgstr ""
+
+#: www/vista/controllers/contacta.phtml:12
+msgid "E-mail"
+msgstr ""
+
+#: www/vista/controllers/contacta.phtml:13
+msgid "Asunto"
+msgstr ""
+
+#: www/vista/controllers/contacta.phtml:14
+msgid "Mensaje"
+msgstr ""
+
+#: www/vista/controllers/contacta.phtml:16
+msgid "Enviar"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:5
+msgid "> El t&iacute;tulo original es un campo obligatorio.<br>"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:6
+msgid "> El nombre de contacto es un campo obligatorio.<br>"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:8
+msgid "> El telefono no es correcto.<br>"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:9
+msgid "> La noticia es un campo obligatorio.<br>"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:10
+msgid "> El director es un campo obligatorio.<br>"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:11
+msgid "> El pa&iacute;s es un campo obligatorio.<br>"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:12
+msgid "> El a&ntilde;o es un campo obligatorio.<br>"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:13
+msgid "> La duraci&oacute;n es un campo obligatorio.<br>"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:14
+msgid "> La sinopsis es un campo obligatorio.<br>"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:15
+msgid "> La ficha t&eacute;cnica es un campo obligatorio.<br>"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:16
+msgid "> La web no tiene un formato correcto.<br>"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:17
+msgid "> El enlace del v&iacute;deo no tiene un formato correcto.<br>"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:18
+msgid "> Es necesario informar el enlace al v&iacute;deo en streaming.<br>"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:19
+msgid "> El coste no es correcto<br>"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:20
+msgid "<strong>Oooops, el formulario no est&aacute; operativo todav&iacute;a. prueba a partir del lunes</strong>"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:21
+msgid "<strong>No has informado la licencia</strong> <br>"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:33
+msgid "Estos datos es s&oacute;lo para ponernos en contacto. Se almacenan en nuestra base de datos y en ning&uacute;n caso se ceder&aacute; esta informaci&oacute;n a terceros ni se har&aacute;n p&uacute;blicos en la web."
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:34
+#: www/vista/controllers/inscripcion.phtml:35
+#: www/vista/controllers/inscripcion.phtml:49
+#: www/vista/controllers/inscripcion.phtml:50
+#: www/vista/controllers/inscripcion.phtml:51
+#: www/vista/controllers/inscripcion.phtml:52
+#: www/vista/controllers/inscripcion.phtml:55
+#: www/vista/controllers/inscripcion.phtml:56
+#: www/vista/controllers/inscripcion.phtml:161
+msgid "obligatorio"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:37
+msgid "eres..."
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:39
+msgid "Realizador/a"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:40
+msgid "Empresa productora"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:41
+msgid "Empresa distribuidora"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:43
+#: www/vista/controllers/inscripcion.phtml:47
+msgid "Datos de la obra"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:48
+msgid "Los datos de la obra se colgar&aacute;n en nuestra p&aacute;gina web, para hacer en una ficha."
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:50
+msgid "Autor/es"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:51
+msgid "Duraci&oacute;n"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:51
+msgid "minutos"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:51
+msgid "segundos"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:52
+msgid "A&ntilde;o de producci&oacute;n"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:53
+msgid "G&eacute;nero"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:54
+msgid "Pa&iacute;s"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:58
+#: www/vista/controllers/inscripcion.phtml:62
+msgid "Informaci&oacute;n adicional"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:63
+msgid "Estos campos no se ponen en la ficha de la obra; no es obligatorio informarlos pero siempre nos viene bien para valorar la obra en su justa medida."
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:64
+msgid "Coste de producci&oacute;n"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:65
+msgid "C&oacute;mo y con qu&eacute; recursos t&eacute;cnicos y humanos se realiz&oacute;"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:72
+msgid "La licencia elegida se ver&aacute; en la ficha de la obra."
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:117
+msgid "Dominio P&uacute;blico"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:120
+msgid "Cartel, v&iacute;deo"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:154
+msgid "Im&aacute;genes y v&iacute;deo"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:155
+msgid "Puedes incluir el cartel (o un fotograma) y un enlace al video en streaming (archive.org, youtuve, vimeo.... )"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:157
+msgid "Subir cartel"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:159
+msgid "La imagen debe ser JPG/JEPG y el tama&ntilde;o m&aacute;ximo"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:161
+msgid "Enlace al v&iacute;deo en streaming"
+msgstr ""
+
+#: www/vista/controllers/inscripcion.phtml:162
+msgid "Enlace de descarga del v&iacute;deo"
+msgstr ""
+
+#: www/vista/controllers/recepcion.phtml:1
+msgid "Hemos recibido "
+msgstr ""
+
+#: www/vista/controllers/recepcion.phtml:1
+msgid " obras hasta el momento. muchas gracias!!!"
+msgstr ""
+
+#: www/vista/controllers/recepcion.phtml:5
+msgid "Ficha"
+msgstr ""
+
+#: www/vista/controllers/recepcion.phtml:18
+msgid "ver v&iacute;deo"
+msgstr ""
+
+#~ msgid "hello world"
+#~ msgstr "hola mundo"

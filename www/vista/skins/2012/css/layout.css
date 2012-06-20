@@ -1,0 +1,78 @@
+/**
+ * estilos solo para el layout
+ **/
+body {
+	padding: 0;
+	margin: 0;
+}
+body {
+	height: 100%;
+	text-align: center;
+}
+html {
+	height:100%;
+}
+#container {
+    width:1280px;
+    margin:0px auto;
+    min-height: 100%;
+    text-align: left;
+}
+* html #container {
+			height: 100%;
+}
+
+#header{
+	height:150px;
+}
+#menu {
+	height:35px;
+	float:left;
+	/* margin-top:-15px; */
+}
+div#title{
+	margin:0;	
+}
+#columna-izq {
+    width: 35%;
+    float:left;
+    height: 100%;
+}
+#columna-izq a img{
+    width:90%;
+}
+#columna-izq fieldset{
+    width:80%;
+    margin-top:15px;
+}
+.columna-der {
+    width:20%;
+    float:left;
+}
+#columnas{
+	width:100%;
+}
+#main {
+	float:left;
+	width: 1168px;
+}
+#main-2 {
+	float:left;
+	width:58%;
+	margin-bottom: 40px;
+	min-height: 580px;
+}
+#main-3 {
+	float:left;
+	width:52%;
+	margin-bottom: 40px;
+}
+#pie{
+	width: 100%;
+	clear: both;
+	background-color: black;
+	height: 40px;
+	font-size: 30px;
+	color:white;
+	text-align: center;
+}

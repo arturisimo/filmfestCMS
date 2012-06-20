@@ -1,0 +1,31 @@
+<? if(empty($img)){?>
+	<iframe height='100px' width='100px'  id='frame_imagen' name='frame_imagen' class='frame oculto' scrolling='no' src="<?=URL_ADMIN?>/agradecimiento/upload" ></iframe>
+<? }?>
+<div id="div-img" class="<?= $classUpload ?>">
+	<?if(!empty($img)){?>
+		<img width="100px" height="100px" src="<?= $img?>" id="imagen_uploaded" />
+		<a href="#" id="change-img" class="<?= $urlPagina."-".$this->_id ?>"><?= _("Cambiar im&aacute;gen")?></a>
+	<?} else { ?>
+		<p><?= _("subir im&aacute;gen")?><br>(jpg, gif, png)</p>	
+		<form enctype="multipart/form-data" method='post' id="form_imagen" name="form_imagen" action="<?=URL_ADMIN?>/agradecimiento/upload" target="frame_imagen">
+				<input name='id_nombre' id='id_nombre' value='<?=$nombre?>' type='hidden'/>
+				<input name='id_donante' id='id_donante' value='<?=$this->_id?>' type='hidden'/>
+				<input type="file" name="imagen" id="imagen"  /><br>
+		</form>
+	<? } ?>	
+</div>
+
+<div id="div-img-info">
+	<form id='form_donante_alta' name='form_donante_alta' method='post'>
+			<input name='id' id='id' value='<?=$this->_id?>' type='hidden'/>
+			<input value='<?=$fileImg?>' name='file_imagen' id='file_imagen' type='hidden' />
+			 
+			<p><label><?= _("Nombre")?></label>
+			<input value='<?=$nombre?>' name='nombre' id='nombre' /></p>
+			
+			<p><label><?= _("P&aacute;gina web")?><span class="small"><?= _("no obligatorio")?></span></label> 
+			<input  value='<?=$url?>' name='web' id='web' /></p>	
+			
+			<p class="boton-enviar" ><input id='b_donante' name='b_donante' type="button" value="<?=_("aceptar")?>"> </p>	
+</form>
+</div>

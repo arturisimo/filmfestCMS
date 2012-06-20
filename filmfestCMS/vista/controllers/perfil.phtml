@@ -1,0 +1,35 @@
+<? if(empty($img)){?>
+	<iframe height='100px' width='100px'  id='frame_imagen' name='frame_imagen' class='frame oculto' scrolling='no' src="<?=URL_ADMIN?>/perfil/upload" ></iframe>
+<? }?>
+<div id="div-img" class="<?= $classUpload ?>">
+	<?if(!empty($img)){?>
+		<img width="100px" height="100px" src="<?= $img?>" id="imagen_uploaded" />
+		<a href="#" id="change-img" class="<?= $urlPagina."-".$this->_id ?>"><?= _("Cambiar im&aacute;gen")?></a>
+	<?} else { ?>
+		<p><?=_("subir im&aacute;gen")?><br>(jpg, gif, png)</p>	
+		<form enctype="multipart/form-data" method='post' id="form_imagen" name="form_imagen" action="<?=URL_ADMIN?>/perfil/upload" target="frame_imagen">
+				<input name='id_nombre' id='id_nombre' value='<?=$nombre?>' type='hidden'/>
+				<input type="file" name="imagen" id="imagen"  />
+		</form>
+	<? } ?>	
+</div>
+
+	<div id="div-img-info">
+	<form id='form_perfil' name='form_perfil' method='post'>
+		<input name='id' id='id' value='<?= $this->_id ?>' type='hidden'/>
+		<input value='<?=$fileImg?>' name='file_imagen' id='file_imagen' type='hidden' />
+		
+		<div>
+			<p class="mini"><label><?=_("Perfil de acceso")?></label>
+			<input value='<?= $nombre ?>' name='nombre' id='nombre' /></p>
+			<p class="mini"><label><?=_("M&oacute;dulo por defecto")?></label>
+				<select id="id_modulodefault" name="id_modulodefault">
+					<?= UtilPagina::getOptions($modulos, $idModuloDefault) ?>   
+	 			</select>
+			</p>
+			<p class="break"><label><?=_("Breve descripci&oacute;n")?></label>
+			<input value='<?= $descripcion ?>' name='descripcion' id='descripcion' /></p>
+		</div>
+		<p class="boton-enviar"><input id='b_perfil' name='b_perfil' type="button" value="<?=_("aceptar")?>" /></p>	
+	</form>
+</div>

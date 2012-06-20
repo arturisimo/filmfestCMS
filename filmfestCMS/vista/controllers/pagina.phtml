@@ -1,0 +1,67 @@
+<form id='form_pagina' name='form_pagina' method='post'>
+	<input name='id' id='id' value='<?= $this->_id ?>' type='hidden'/>
+	<input name='id_edicion' id='id_edicion' value='<?= $this->_anyo ?>' type='hidden'/>
+	<input type="hidden" id="lyt_selected" value="<?=$layoutPagina?>"/>
+	<input type="hidden" id="textosSelected" value=""/>
+	
+	<p class="mini"><label> Url </label>
+	<input value='<?= $urlPagina ?>' name='id_url' id='id_url' /></p>
+	
+	<p class="mini"><label> <?=_("T&iacute;tulo")?> </label>
+	<input value='<?= $titulo ?>' name='id_titulo' id='id_titulo' /></p>
+	
+	<p class="break"><label> <?=_("Breve descripci&oacute;n")?></label>
+	   <input value='<?= $descripcion ?>' name='id_descripcion' id='id_descripcion' /></p>
+	
+	<div>
+		<p class="micro"> 
+			<label><?=_("M&oacute;dulo")?></label>
+			<select name="id_modulo" id="id_modulo">
+				<?= UtilPagina::getOptions($webmodulos, $idWebModulo) ?>
+			</select>
+		</p>
+		<p class="micro"><label><?=_("Apariencia")?> </label>
+			<select name="id_skin" id="id_skin">
+				<? foreach ($skins as $skin){?>
+					<option  <? if($skin == $skinPagina){ ?> selected <? } ?> value="<?=$skin?>"><?=$skin?></option>
+				<? } ?>
+			</select>
+		</p>
+		<p class="micro"><label><?=_("Plantilla")?> </label>
+			<select name="id_layout" id="id_layout">
+				<option  value="0"><?=_("Selecciona")?>...</option>
+				<? foreach ($layouts as $layout){?>
+					<option  <? if($layout == $layoutPagina){ ?> selected <? } ?> value="<?=$layout?>"><?=$layout?></option>
+				<? } ?>
+			</select>
+		</p>
+	</div>
+	<div class="oculto break" id="div_texto" >
+		<p class="select"><label><?=_("Textos posibles")?> </label>
+		<select name='textosDisponibles' id='textosDisponibles' multiple="multiple" size="5" style="width:200px">
+		<?= UtilPagina::getOptions($textosPosibles, 0, false) ?>
+		</select>
+		<p class="arrow"><img src="<?=URL_IMG_ADMIN?>right.png" id="right" /><br>
+		<img src="<?=URL_IMG_ADMIN?>left.png" id="left" /></p>
+		<p class="select"><label><?=_("Textos")?> </label>
+		<select name='textos' id='textos' multiple="multiple" size="5" style="width:200px">
+		<?= UtilPagina::getOptions($textos, 0, false) ?>
+		</select> 
+	</div>
+	
+	<div class="break">
+		<p class="micro"><label><?=_("Nombre en el menu")?></label>
+		<input value='<?= $nombre ?>' name='id_nombremenu' id='id_nombremenu' /></p>
+		<p class="micro"><label><?=_("Orden en el menu")?></label>
+		<input value='<?= $orden ?>' name='id_orden' id='id_orden' /></p>
+		<p class="micro"><label><?=_("Submenu")?> <span class="small"><?=_("Depende de otra p&aacute;gina")?></span></label>
+		<select id="id_paginapadre" name="id_paginapadre">
+			<?= UtilPagina::getOptions($paginasPadre, $idPaginaPadre) ?>
+		</select>
+		<p class="mini">
+		<input type="checkbox" <?php if($portada=="S"){?>checked <?}?> name='id_portada' id='id_portada' /><?=_("Portada")?></p>
+	</p>
+	</div>
+	
+	<p class="boton-enviar"><input id='b_pagina' name='b_pagina' type="button" value="<?=_("aceptar")?>"> </p>	
+</form>

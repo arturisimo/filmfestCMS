@@ -1,0 +1,20 @@
+<?php 
+	$i=1;
+	foreach ($documentos as $documento) { 
+		$file= URL_DOC.$documento->archivo;
+		$infoFile = pathinfo($file);
+		$sizeFile = Util::formatBytes(filesize(DOC_PATH.$documento->archivo));
+		$typeFile = strtoupper($infoFile['extension']);
+		?>
+		<div class='doc_muestra'>
+				  <a href='<?=URL_DOC.$documento->archivo?>'>
+				  	<img alt='<?=$documento->descripcion?>' src='<?=URL_LOGO?>docs/<?=$documento->imagen?>' />
+				  </a>
+				</div>
+				<div class='txt_muestra padding_15'>
+				<h2><?=$documento->nombre?></h2>
+				<p><?=$documento->descripcion?></p>
+				<p><a href='<?=URL_DOC.$documento->archivo?>'><?=_("descarga")?></a> (<?= $typeFile." ".$sizeFile?>)</p>
+			</div>
+			<div style='clear: both;'>&nbsp;</div>
+<?	}	?>

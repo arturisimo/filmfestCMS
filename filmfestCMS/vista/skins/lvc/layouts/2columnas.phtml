@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es-ES" lang="es-ES">
+	<head>
+		<? include($pathCommons."includes/head.phtml");?>
+	</head>
+	<body>
+		<div id="allcontent">
+		    <div id="topcontent">
+				<div id="header">
+					<? include($pathCommons."includes/cambio_edicion.phtml");?>
+					<? include($pathCommons."includes/botonera.phtml");?>	
+				</div>
+		        <div class="break"></div>
+		    </div>
+			
+			<? include($pathCommons."includes/menu.phtml");?>
+			
+			<div id="columns">
+	            <div id="maincontent" class="maincontentedicion-noleftmenu">
+		            <div id="msg" class="oculto" ></div>		           
+					<? if(!empty($title)){?>
+						<h1><?=$title?><span class="small"><?=$description?></span></h1>
+					<? } ?>
+		        	<?	include_once($pathVista.'controllers'. DS . $this->_controller .".phtml"); ?>
+	  			</div>
+	  			<div id="columna-derecha">
+					<? include($pathCommons."includes/columna_derecha.phtml");?>
+					<div class="break"></div>
+				</div>
+		    </div>
+		     <div id="footer"><p><?= _("hecho con")." ".APP . " " . APP_VERSION?></p></div>
+	    </div>
+	    <div class="break"></div>
+	</body>
+</html>

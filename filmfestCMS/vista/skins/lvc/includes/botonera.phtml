@@ -1,0 +1,11 @@
+<? if (isset($_SESSION['id_usuario']) && isset($_SESSION['nombreusuario'])){?>
+<div class="botonera">
+	<a href="#" id="id_inicio"><img src="<?=URL_IMG_ADMIN?>home.png" /></a>
+	<? foreach($usuario->getPerfiles() as $perfil){ ?>	
+		<a href='#' id='<?= $perfil->nivel."-".$perfil->modulo?>' class="perfil" title="<?=$perfil->nombre?> - <?=$perfil->descripcion?>">
+			<img width="90px" height="90px" src='<?= URL_IMG_ADMIN.$perfil->logo?>' />
+		</a>
+	<? }?>
+	<a href="#" id="id_exit"><img src="<?=URL_IMG_ADMIN?>exit.png" /></a>
+</div>
+<? }?>

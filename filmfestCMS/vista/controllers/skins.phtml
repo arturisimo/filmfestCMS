@@ -1,0 +1,12 @@
+<p><?= _("Estos valores estan definidos en")?> <strong><?=ROOT?>conf.php</strong></p>
+<p class="micro"><label><?=_("Apariencia")?> </label>
+	<select name="id_skin" id="id_skin">
+		<? foreach ($skins as $skin){?>
+			<option  <? if($skin == $skinAdmin){ ?> selected <? } ?> value="<?=$skin?>"><?=$skin?></option>
+		<? } ?>
+	</select>	
+</p>
+<p class="micro"><label><?= _("Idioma")?></label>
+<?= ADMIN_LANG ?>
+<p class="micro"><label><?= _("Email")?></label>
+<?= ADMIN_EMAIL ?>

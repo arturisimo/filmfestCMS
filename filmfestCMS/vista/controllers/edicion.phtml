@@ -1,0 +1,54 @@
+<link href="<?=$urlCommons?>css/calendario.css" rel="stylesheet" type="text/css" />
+<script src="<?=$urlCommons?>js/calendario.js" type="text/javascript" language="javascript"></script>
+
+<? if(empty($img)){?>
+	<iframe height='100px' width='100px'  id='frame_imagen' name='frame_imagen' class='frame oculto' scrolling='no' src="<?=URL_ADMIN?>/edicion/upload" ></iframe>
+<? }?>
+<div id="div-img" class="<?= $classUpload ?>">
+	<?if(!empty($img)){?>
+		<img width="100px" height="100px" src="<?= $img?>" id="imagen_uploaded" />
+		<a href="#" id="change-img" class="<?= $urlPagina."-".$this->_id ?>"><?= _("Cambiar im&aacute;gen")?></a>
+	<?} else { ?>
+		<p><?= _("subir im&aacute;gen")?><br>(jpg, gif, png)</p>
+		<form enctype="multipart/form-data" method='post' id="form_imagen" name="form_imagen" action="<?=URL_ADMIN?>/edicion/upload" target="frame_imagen">
+				<input name='id_nombre' id='id_nombre' value='<?=$nombre?>' type='hidden'/>
+				<input name='id_edicion' id='id_edicion' value='<?=$this->_id?>' type='hidden'/>
+				<input type="file" name="imagen"  id="imagen"  /><br>
+		</form>
+	<? } ?>	
+</div>
+
+<div id="div-img-info">
+	<form id='form_edicion' name='form_edicion' method='post'>
+		<input value='<?=$fileImg?>' name='file_imagen' id='file_imagen' type='hidden' />
+		<input name='id' id='id' value='<?= $this->_id ?>' type='hidden'/>
+		<input name='langsSelected' id='langsSelected' value='' type='hidden'/>
+			
+		<p class="break"><label><?= _("Nombre")?></label><input  value='<?=$nombre?>' name='nombre' id='nombre' /></p>		
+	
+		<p class="fecha-dia"><label><?= _("Dia inauguraci&oacute;n")?></label> 
+		<input  readonly="readonly" value="<?=$fechaInicio ?>" class="calendario" id="id_dia_inicio" name="id_dia_inicio" type="text"></p>
+		<p class="fecha-dia"><label><?= _("Dia clausura")?></label> <input class="calendario" readonly="readonly" value="<?=$fechaFin ?>" id="id_dia_fin" name="id_dia_fin" type="text"></p>
+		
+		<p class="break"><label><?= _("Breve descripcion")?></label> 
+		<textarea rows="3" name='descripcion' id='descripcion'><?=$descripcion?></textarea></p>
+		
+		<p class="break"><label><?= _("Ubicaci&oacute;n")?> <span class="small"><?= _("Definido en")?> <?=ROOT?>conf.php</span></label>
+		<span id="ubicacion"><?= UBICACION ?></span>
+		
+		<p class="select"><label><?=_("Idiomas posibles")?> </label>
+		<select name='langsPosibles' id='langsPosibles' multiple="multiple" size="5" style="width:150px">
+		<?= UtilPagina::getOptions($langsDisponibles, 'xx', false) ?>
+		</select></p>
+		<p class="arrow"><img src="<?=URL_IMG_ADMIN?>right.png" id="right" /><br>
+		<img src="<?=URL_IMG_ADMIN?>left.png" id="left" /></p>
+		<p class="select"><label><?=_("Idiomas")?> </label>
+		<select name='langs' id='langs' multiple="multiple" size="5" style="width:150px">
+		<?= UtilPagina::getOptions($langs, 'xx', false) ?>
+		</select> </p>
+				
+		<p class="boton-enviar" ><input id='b_edicion' name='b_edicion' type="button" value="<?=_("aceptar")?>"></p>
+	</form>
+	
+	
+</div>

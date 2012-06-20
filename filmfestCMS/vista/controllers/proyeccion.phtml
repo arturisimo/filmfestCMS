@@ -1,0 +1,32 @@
+<form id='formProyeccion' name='formProyeccion' method='post'>
+	<input name='id' id='id' value='<?= $this->_id ?>' type='hidden'/>
+	<input name='id_edicion' id='id_edicion' value='<?= $this->_anyo ?>' type='hidden'/>
+	
+	<div id='proyeccion-espacio'>
+		<label><?=_("Espacio de proyecci&oacute;n")?></label>
+		<select multiple="multiple" size="10" id="id_espacio" name="id_espacio">
+			<?= UtilPagina::getOptions($espacios, $idEspacio, false) ?>
+		</select>
+	</div>
+	
+	<div id='proyeccion-dia' >
+		<label><?=_("D&iacute;a de proyecci&oacute;n")?></label>
+		<select multiple="multiple" size="10" id="id_dia" name="id_dia">
+			<? for ($i = $fechaInicio; $i <= $fechaFin; $i+=86400) {?>
+				<option <? if($i == strtotime($diaProyeccion)){ ?> selected <? } ?> value="<?=$i?>"><?=strftime("%A %e %B", $i)?></option>
+			<? }?>
+		</select>
+	</div>
+	
+	<div id='proyeccion-hora'>
+		<label><?=_("Hora")?></label>
+		<input value='<?= $hora?>' name='id_hora' id='id_hora' />
+	</div>
+	
+	<p class="break"><label><?=_("T&iacute;tulo")?> <span class="small"><?=_("no obligatorio")?></span></label>
+		<input value='<?= $titulo?>' name='id_titulo' id='id_titulo' /></p>
+	<p><label><?=_("Breve descripci&oacute;n")?> <span class="small"><?=_("no obligatorio")?></span></label>
+		<input value='<?= $descripcion ?>' name='id_descripcion' id='id_descripcion' /></p>
+	<p class="boton-enviar">
+	<input id='b_proyeccion' name='b_proyeccion' type="button" value="<?=_("aceptar")?>"> </p>
+</form>

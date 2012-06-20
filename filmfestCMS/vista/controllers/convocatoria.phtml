@@ -1,0 +1,91 @@
+<? if(!empty($this->_id)){?>
+	
+	<!-- TinyMCE -->
+	<script src="<?=URL_LIBJS?>tiny_mce/tiny_mce.js"></script>
+	<script type="text/javascript">
+		tinyMCE.init({
+			mode : "specific_textareas",
+	        editor_selector : "mceEditor",
+			theme : "advanced",
+			theme_advanced_buttons1 : "bold,italic,underline,separator,link,unlink,separator,image,media,separator,code,fullscreen",
+			theme_advanced_buttons2 : "",
+			theme_advanced_buttons3 : "",
+			plugins : "fullscreen"
+		});
+	</script>
+	<!-- /TinyMCE -->
+	 
+	<!-- cartel -->
+	<? if(empty($pelicula->cartel)){?>
+		<iframe height='100px' width='100px'  id='frame_imagen' name='frame_imagen' class='frame oculto' scrolling='no' src="<?=URL_ADMIN?>/pelicula/upload" ></iframe>
+	<? }?>
+	<div style="width:100px; float:left; margin-right:20px;">
+	<div id="div-img" class="<?= $pelicula->class_upload ?>">
+		<?if(!empty($pelicula->cartel)){?>
+			<img width="100px" height="100px" src="<?=URL_IMG?>peliculas/<?=$this->_anyo?>/<?=MEDIUM?>/<?= $pelicula->cartel?>" />
+			<a href="#" id="change-img" class="<?= $urlPagina."-".$this->_id ?>"><?= _("Cambiar im&aacute;gen")?></a>
+		<?} else { ?>
+			<p><?=_("subir im&aacute;gen")?><br>(jpg, gif, png)</p>	
+			<form enctype="multipart/form-data" method='post' id="form_imagen" name="form_imagen" action="<?=URL_ADMIN?>/pelicula/upload" target="frame_imagen">
+					<input name='id_nombre' id='id_nombre' value='<?=$pelicula->titulo?>' type='hidden'/>
+					<input name='galeria' id='galeria' value='<?=$this->_anyo?>' type='hidden'/>
+					<input name='id_pelicula' id='id_pelicula' value='<?=$this->_id?>' type='hidden'/>
+					<input type="file" name="imagen" id="imagen"  /><br>
+			</form>
+		<? } ?>
+	</div>
+	<div class="info-contact">
+		<p><strong><?=_("Inscripci&oacute;n")?>:</strong><br> <?= $pelicula->fecha_alta ?></p>
+		<p><strong><?=_("Contacto")?>:</strong><br> <?= htmlentities($pelicula->nombre_contacto) ?> / <?= $pelicula->email ?> / <?= $pelicula->telefono ?></p>
+	</div>
+	</div>
+	<div id="div-img-info">
+			<form id='formPelicula' name='formPelicula' method='post'>
+				<input name='id' id='id' value='<?=$this->_id?>' type='hidden'/>
+				<input name='id_muestra' id='id_muestra' value='<?=$this->_anyo?>' type='hidden'/>
+				<input value='<?=$pelicula->id_imagen?>' name='file_imagen' id='file_imagen' type='hidden' />
+				<input value='0' name='id_donante' id='id_donante' type='hidden' />
+				
+				<p><label><?=_("T&iacute;tulo de la pel&iacute;cula")?></label>
+					<input  value='<?=$pelicula->titulo?>' name='titulo' id='titulo' />
+				</p>
+					
+				<p><label><?=_("Proyecci&oacute;n")?> <span class="small"><?=_("si resulta seleccionada")?></span></label>
+				<select id='id_proyeccion' name='id_proyeccion'>
+					<?= UtilPagina::getOptions($proyecciones, $pelicula->id_proyeccion) ?>
+				</select></p>
+				
+				<p class="break"><label><?=_("V&iacute;deo streaming")?> <span class="small">(youtube, blip.tv, dailymotion ...)</span></label>
+				<input value='<?=$pelicula->enlace?>' name='id_enlace' id='id_enlace' /></p>
+				
+				<p><label><?=_("Url descarga v&iacute;deo")?></label>
+				<input value='<?=$pelicula->video_descarga?>' name='id_descarga' id='id_descarga' /></p>
+				
+				<p><label><?=_("Licencia")?> <span class="small"></span></label>
+				<select id='id_licencia' name='id_licencia'>
+					<?= UtilPagina::getOptions($licencias, $pelicula->licencia, false) ?>
+				</select></p>
+				
+				<p><label><?=_("Presentaci&oacute;n")?> <span class="small"><?=_("si hay debate previo, presenta la directora, si nos hace ilusi&oacute;n...")?></span></label> 
+				<textarea id="id_propio" name="id_propio" rows='2'><?= $pelicula->material_propio ?></textarea>
+				</p>
+				 
+				<p ><label><?=_("Ficha t&eacute;cnica y art&iacute;stica")?></label>
+				<textarea rows='5' cols='50'  name='id_ficha' id='id_ficha' class="mceEditor"><?=$pelicula->ficha_tecnica?></textarea></p>
+				
+				<p><label><?=_("Sinopsis")?></label> 
+				<textarea rows='5' cols='50'  name='id_sinopsis' id='id_sinopsis' class="mceEditor" ><?=$pelicula->sinopsis?></textarea></p>
+				
+				<p class="boton-enviar"><input id='b_pelicula' name='b_pelicula' type="button" value="<?=_("aceptar")?>"></p>
+			</form>
+	</div>
+		
+	<!--  info adicional -->
+	<div class="info-adicional">
+		<label><?=_("Datos adicionales")?></label>
+		<p><strong><?=_("Licencia")?>:</strong> <?= $pelicula->nombre_licencia ?> - <strong><?=_("Coste")?>:</strong> <?= $pelicula->coste ?></p>
+		<p><strong><?=_("Recursos")?>:</strong> <?= $pelicula->recursos ?></p>
+		<p><strong><?=_("Comentarios")?>:</strong> <?= $pelicula->comentarios ?></p>
+	</div>
+	
+<? } ?>

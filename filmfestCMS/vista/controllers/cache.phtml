@@ -1,0 +1,20 @@
+<? if($clear){ 
+	apc_clear_cache();
+?>
+<h3>cache limpiada</h3>
+<? } else { ?>
+<p><a href="<?= URL_ADMIN ?>/cache/clear">limpiar cache</a>
+<? }?>
+
+<h3>apc_cache_info</h3>
+<?	if(function_exists('apc_cache_info')){
+		Log::add(apc_cache_info()); 
+	} else { ?>
+		la funci&oacute;n apc_cache_info no existe
+<?	} ?>
+<h3>apc_sma_info</h3>
+<?	if(function_exists('apc_sma_info')){
+		Log::add(apc_sma_info()); 
+	} else { ?>
+		la funci&oacute;n apc_sma_info no existe
+<?	} ?>

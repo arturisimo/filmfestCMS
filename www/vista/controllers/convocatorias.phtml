@@ -1,0 +1,13 @@
+<?php 
+	foreach ($convocatorias as $convocatoria) { ?>		
+		<div class='img_muestra'>
+			<a href="<?=BASE_URL.'/'.$convocatoria->id.'/'.$convocatoria->url?>" >
+				<img src='<?= URL_GALERIAS."carteles/".MEDIUM."/".$convocatoria->cartel?>'/>
+			</a>
+			<p><strong><?=$convocatoria->nombre?></strong><br>
+				<?=$convocatoria->inicio?> a <?=$convocatoria->fin?> de <?=$convocatoria->id?>
+				<br><span class='pie'><?=$convocatoria->descripcion?></span>
+			</p>
+		 </div>
+<?	} ?>
+	

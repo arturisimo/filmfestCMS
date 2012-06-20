@@ -1,0 +1,45 @@
+<? if(empty($img)){?>
+	<iframe height='100px' width='100px'  id='frame_imagen' name='frame_imagen' class='frame oculto' scrolling='no' src="<?=URL_ADMIN?>/imagen/upload" ></iframe>
+<? }?>
+<div id="div-img" class="<?= $classUpload ?>">
+	<?if(!empty($img)){?>
+		<img width="100px" height="100px" src="<?=$img?>" />
+		<? if (!empty($url)){?>
+			<span></span>
+		<? } else {?>
+		<p><?=$sizeFile?> <br> <?=$dimensiones?></p>
+		<? }?>
+	<?} else { ?>
+		<p><?= _("subir im&aacute;gen")?><br>(jpg, gif, png)</p>
+		<form enctype="multipart/form-data" method='post' id="form_imagen" name="form_imagen" action="<?=URL_ADMIN?>/imagen/upload" target="frame_imagen">
+				<input name='galeria' id='galeria' value='<?=$galeria?>' type='hidden'/>
+				<input name='id_galeria_img' id='id_galeria_img' value='<?=$idGaleria?>' type='hidden'/>
+				<input type="file" name="imagen" id="imagen"  /><br>
+		</form>
+	<? } ?>	
+</div>
+
+
+<div id="div-img-info">
+	<form id='form_img' name='form_img' method='post'>
+		<input value='<?=$fileImg?>' name='file_imagen' id='file_imagen' type='hidden' />
+		<input name='id' id='id' value='<?= $this->_id ?>' type='hidden'/>
+		<?if(empty($img)){?>
+			<p class="mini break"> <label><?= _("Galer&iacute;as")?></label> 
+				<select name="id_galeria" id="id_galeria">
+					<?= UtilPagina::getOptions($galerias, $idGaleria) ?>
+				</select> 
+			</p>
+		<? } else {?>
+			<p><a target="_blank" href="<?=URL_GALERIAS.$galeria."/".$fileImg?>"><?=URL_GALERIAS.$galeria."/".$fileImg?></a></p>
+			<input name='id_galeria' id='id_galeria' type='hidden' value="<?=$idGaleria?>"/>
+		<? }?>
+		<p class="break"><label><?= _("Descripci&oacute;n")?></label>
+		<input  value='<?=$descripcion?>' name='descripcion' id='descripcion' /></p>
+		
+		<p><label>Url streaming <span class="small"><?= _("s&oacute;lo en caso de v&iacute;deos")?></span></label>
+		<input value='<?=$url?>' name='id_video' id='id_video' type="text" /></p>
+		
+		<p class="boton-enviar"><input id='b_imagen' name='b_imagen' type="button" value="<?=_("aceptar")?>"> </p>	
+	</form>
+</div>
