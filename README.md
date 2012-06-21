@@ -13,9 +13,16 @@ se ha utilizado php 5.2 / mySQL / prototype / TinyMCE / lightbox / JS Calendar /
 * Ejecutar en la bbdd en sql/lvc.sql
 * Usuario zona de administracion admin / 12345
 
+
 ## Licencia
 
 GNU Affero DPL http://www.gnu.org/licenses/agpl-3.0.en.html
+
+
+## Version
+
+1.0 Beta
+
 
 ## Contacto
 
