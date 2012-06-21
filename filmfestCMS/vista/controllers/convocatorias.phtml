@@ -3,7 +3,7 @@
 <? }?>
 <div id="div-img" class="<?= $classUpload ?>">
 	<?if(!empty($img)){?>
-		<img width="100px" height="100px" src="<?= $img?>" />
+		<img width="100px" height="100px" src="<?= $img?>" id="imagen_uploaded"/>
 		<a href="#" id="change-img" class="<?= $urlPagina."-".$this->_id ?>"><?= _("Cambiar im&aacute;gen")?></a>
 	<?} else { ?>
 		<p>subir im&aacute;gen<br>(jpg, gif, png)</p>	

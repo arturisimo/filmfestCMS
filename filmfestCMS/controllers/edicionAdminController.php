@@ -89,9 +89,9 @@ class edicionAdminController extends AdminController{
 			if($ok=="ok"){
 				$campos = array_merge($campos, array("id" => $id));
 				$ok = $this->_dao->insert($campos, $this->_tabla);
-				//insercion imagen del cartel en la galeria de carteles
+				//TODO insercion imagen del cartel en la galeria de carteles
 				$ok = $this->_dao->insert(array("id" => $id, "url"=>"", "cartel"=>$_POST['file_imagen'], "alta"=>"N"), "convocatorias");
-				//TODO hacer una funcion que copie
+				//TODO hacer una funcion recursiveCopy que funcione
 				Util::recursiveCopy(ROOT. WEB . DS . "vista" . DS . "skins" . DS . "2012", ROOT . WEB . DS . "vista"  .DS . "skins" .DS . $id);
 			}
 			
@@ -149,7 +149,7 @@ class edicionAdminController extends AdminController{
 	public function upload(){ 
      	if(isset($_FILES['imagen'])){
 	     	$thumbnail = "100x100";
-	     	$medium = "250x100";
+	     	$medium = "200x150";
 	     	try{
 	    		$this->_pathImg = GALERIAS_PATH . $this->_carpetaImg . DS;
 	    		$nombreImagen = $this->uploadImagen($thumbnail, $medium, "");

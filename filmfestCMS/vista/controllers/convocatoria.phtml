@@ -22,7 +22,7 @@
 	<div style="width:100px; float:left; margin-right:20px;">
 	<div id="div-img" class="<?= $pelicula->class_upload ?>">
 		<?if(!empty($pelicula->cartel)){?>
-			<img width="100px" height="100px" src="<?=URL_IMG?>peliculas/<?=$this->_anyo?>/<?=MEDIUM?>/<?= $pelicula->cartel?>" />
+			<img width="100px" height="100px" src="<?=URL_IMG?>peliculas/<?=$this->_anyo?>/<?=MEDIUM?>/<?= $pelicula->cartel?>" id="imagen_uploaded" />
 			<a href="#" id="change-img" class="<?= $urlPagina."-".$this->_id ?>"><?= _("Cambiar im&aacute;gen")?></a>
 		<?} else { ?>
 			<p><?=_("subir im&aacute;gen")?><br>(jpg, gif, png)</p>	

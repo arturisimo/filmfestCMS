@@ -36,7 +36,7 @@ function _onLoad(){
 				ajax.open("POST", urlAdmin + item[0]+'/deleteImagen', true);
 				ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 				ajax.send("id="+ item[1]);
-				$('imagen_uploaded').src="/img/logo/admin/loading.gif";
+				$('imagen_uploaded').src= urlImgAdmin + "loading.gif";
 				ajax.onreadystatechange=function() {
 					if (ajax.readyState == 4) {
 						setTimeout("location.reload(true)", 5000);

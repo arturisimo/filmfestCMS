@@ -614,7 +614,6 @@ function _onLoad(){
 			}
 			
 			$('langsSelected').value = langs;
-			confirm($('langsSelected').value);
 			
 			if(isVacio($F('langsSelected')) ){
 				bCorrecto = false;
