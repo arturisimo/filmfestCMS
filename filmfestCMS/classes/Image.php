@@ -25,11 +25,10 @@ class Image {
         $this->_fileSize = filesize($name);
 	}
    
-	
+	//TODO: funcion optimizar imagenes
 	public function optimize(){
 		if ($this->_fileSize > 100000){
-			imagejpeg($this->_file, $this->_file, 50);
-			Error::add("ikmg".$this->_fileSize);
+			
 		} 
 	}
 	

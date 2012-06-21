@@ -1,14 +1,5 @@
-<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAInjIAuQbgVc8WgxWlOTj3BQcvJF_4LkfuUMQC7kdwHnEQcm1eBTY8mmP0XZTDcnmzN9I16KLYrqQNw" type="text/javascript"></script>
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=<?= GOOGLEMAP_KEY ?>" type="text/javascript"></script>
 <script type="text/javascript">	
-	 //<![CDATA[  
-	 	/*
-	  	var icon = new GIcon();
-		icon.image = "http://www.lavapiesdecine.net/repositorio/logo_lavapies.jpg";
-		icon.shadow = "";
-		icon.iconSize = new GSize(60, 40);
-		icon.iconAnchor = new GPoint(6, 20);
-		icon.infoWindowAnchor = new GPoint(5, 1);		  
-	      */
 	    function load(){
 			if (GBrowserIsCompatible()) {
 				var mapa = new GMap2(document.getElementById("map"));
@@ -45,8 +36,7 @@
 		    		});
 		    	<?  } ?>
 			}
-		}
-	//]]>	
+		}	
   </script>
 
 <div id='lista'>

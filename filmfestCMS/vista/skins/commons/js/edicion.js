@@ -678,6 +678,19 @@ function _onLoad(){
 			Element.removeClassName($('id_dia_fin'), 'errorLabel');
 			return false;
 		}, false);
+		
+		
+		/*calendario */
+		Event.observe('id_dia_inicio', 'focus', function(e){
+			$('id_dia_inicio').value='';
+			displayCalendar($('id_dia_inicio'),'dd/mm/yyyy',this,false);
+		});
+	
+		Event.observe('id_dia_fin', 'focus', function(e){
+			$('id_dia_fin').value='';
+			displayCalendar($('id_dia_fin'),'dd/mm/yyyy',this,false);
+		});
+		
 	}
 	
 	/* convocatorias*/
@@ -968,7 +981,7 @@ function _onLoad(){
 				$('form_imagen').submit();
 				ocultar($('div-img'));
 				mostrar($('frame_imagen'));
-				$('frame_imagen').contentWindow.document.body.innerHTML="<img height='90px' src='/img/logo/admin/loading.gif' />";
+				$('frame_imagen').contentWindow.document.body.innerHTML="<img height='90px' src='" + urlImgAdmin + "loading.gif' />";
 			}
 			else {
 				goMsg.mostrar();
@@ -1008,7 +1021,7 @@ function _onLoad(){
 				$('form_uploaddoc').submit();
 				ocultar($('div-doc'));
 				mostrar($('frame_doc'));
-				$('frame_doc').contentWindow.document.body.innerHTML="<img src='/filmfestCMS/vista/skins/commons/img/loading.gif' />";
+				$('frame_doc').contentWindow.document.body.innerHTML="<img src='" + urlImgAdmin + "loading.gif' />";
 			}
 			else {
 				goMsg.mostrar();

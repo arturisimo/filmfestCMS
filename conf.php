@@ -7,6 +7,7 @@
 	define('UBICACION', 'Madrid, ES');
 	define('LONGITUD', '40.4091217');
 	define('LATITUD', '-3.701225');
+	define('GOOGLEMAP_KEY', 'ABQIAAAAInjIAuQbgVc8WgxWlOTj3BQcvJF_4LkfuUMQC7kdwHnEQcm1eBTY8mmP0XZTDcnmzN9I16KLYrqQNw');
    	
    	//config zona admin
 	define('ADMIN_SKIN', 'lvc');

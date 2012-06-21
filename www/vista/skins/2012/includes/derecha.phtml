@@ -1,5 +1,5 @@
 <div id="proyecciones">
-	<span class="titleProyecciones"><a href="http://lavapiesdecine.net/proyecciones">Proyecciones</a></span><br>
+	<span class="titleProyecciones"><a href="<?= $this->_baseUrl?>proyecciones">Proyecciones</a></span><br>
 	Junio 2012 - Julio 2012
 	<div id='calendario'>
 		<?=	UtilPagina::calendario($this->_anyo, $fechaInicio, $fechaFin, BASE_URL."/proyecciones") ?>
@@ -7,17 +7,17 @@
 </div>
 <div id="textos">
 	<ul>
-		<li><a href="http://lavapiesdecine.net/doc/programa-de-mano2012.pdf"><strong>Programa de mano</strong></a> <span class="mini">(PDF 1.9 MB)</span></li>
+		<li><a href="<?= URL_DOC?>programa-de-mano2012.pdf"><strong>Programa de mano</strong></a> <span class="mini">(PDF 1.9 MB)</span></li>
 	</ul>
 </div>
 <div id="textos">
 	<ul>
-		<li><a href="http://lavapiesdecine.net/agradecimientos">Agradecimientos</a></li>
+		<li><a href="<?= $this->_baseUrl?>agradecimientos">Agradecimientos</a></li>
 	</ul>
 </div>
 <div id="textos">
 	<ul>
-		<li class="mayo"><span><a href="http://lavapiesdecine.net/paisajes-activos">depende de nosotrxs vivirlo</a><br><a href="http://lavapiesdecine.net/en-la-plaza">En la plaza</a></span></li>
+		<li class="mayo"><span><a href="<?= $this->_baseUrl?>paisajes-activos">depende de nosotrxs vivirlo</a><br><a href="http://lavapiesdecine.net/en-la-plaza">En la plaza</a></span></li>
 	</ul>
 </div>
 <div id="logos">
@@ -25,30 +25,7 @@
 		<li class="facebook"><span><a target="_blank" href="http://facebook.com/lavapiesdecine">facebook.com/lavapiesdecine</a></span></li>
 		<li class="twitter"><span><a target="_blank" href="http://twitter.com/lavapiesdecine">twitter.com/lavapiesdecine</a></span></li>
 		<li class="blip"><span><a target="_blank" href="http://blip.tv/lavapiesdecine">blip.tv/lavapiesdecine</a></span></li>
-		<li class="mail"><span><a href="/contacta">escr&iacute;benos</a></span></li>
-	</ul>
-</div>
-<div id="muestras">
-	<span class="titleProyecciones"><a href="http://lavapiesdecine.net/muestras-anteriores">Muestras Anteriores</a></span><br>
-	<ul>
-		<li><a target="_blank" title="8 Muestra de Cine de Lavapi&eacute;s" href="/2011"><img src="http://lavapiesdecine.net/img/galerias/carteles/tn/cartel_8.jpg" width="40px" /></a>
-		<a target="_blank" title="7 Muestra de Cine de Lavapi&eacute;s" href="/2010"><img src="http://lavapiesdecine.net/img/galerias/carteles/tn/cartel_7.jpg" width="40px" /></a>
-		<a target="_blank" title="6 Muestra de Cine de Lavapi&eacute;s" href="/2009"><img src="http://lavapiesdecine.net/img/galerias/carteles/tn/cartel_6.jpg" width="40px" /></a>
-		<a target="_blank" title="V Muestra de Cine de Lavapi&eacute;s" href="/2008"><img src="http://lavapiesdecine.net/img/galerias/carteles/tn/cartel_V.jpg" width="40px" /></a><li>
-		<li><a target="_blank" title="4 Muestra de Cine de Lavapi&eacute;s" href="/2007"><img src="http://lavapiesdecine.net/img/galerias/carteles/tn/cartel_IV.jpg" width="40px" /></a>
-		<a target="_blank" title="3 Muestra de Cine de Lavapi&eacute;s" href="/2006"><img src="http://lavapiesdecine.net/img/galerias/carteles/tn/cartel_III.jpg" width="40px" /></a>
-		<a target="_blank" title="2 Muestra de Cine de Lavapi&eacute;s" href="/2005"><img src="http://lavapiesdecine.net/img/galerias/carteles/tn/cartel_II.jpg" width="40px" /></a>
-		<a target="_blank" title="1 Muestra de Cine de Lavapi&eacute;s" href="/2004"><img src="http://lavapiesdecine.net/img/galerias/carteles/tn/cartel_I.jpg" width="40px" /></a></li>
-	</ul>
-</div>
-<div id="muestras">
-	<span class="titleProyecciones"><a href="http://lavapiesdecine.net/autoproducciones">Convocatorias</a></span><br>
-	<ul>
-		<li><a target="_blank" href="/2011/material-recibido"><img src="http://lavapiesdecine.net/img/galerias/carteles/tn/atp_8.jpg" width="40px" /></a>
-		<a target="_blank" href="/2010/material-recibido"><img src="http://lavapiesdecine.net/img/galerias/carteles/tn/atp_7.jpg" width="40px" /></a>
-		<a target="_blank" href="/2009/material-recibido"><img src="http://lavapiesdecine.net/img/galerias/carteles/tn/atp_6.jpg" width="40px" /></a>
-		<a target="_blank" href="/2008/autoproducciones"><img src="http://lavapiesdecine.net/img/galerias/carteles/tn/atp_V.jpg" width="40px" /></a><li>
-		</li>
+		<li class="mail"><span><a href="<?= $this->_baseUrl?>contacta">escr&iacute;benos</a></span></li>
 	</ul>
 </div>
 <div id="licencia">
@@ -56,9 +33,9 @@
 	<span class="mini">Los contenido generados por la Muestra de Cine de Lavapi&eacute;s estan liberados con la licencia <a href="http://creativecommons.org/licenses/by-sa/3.0/es/"><strong>Creative commons BY-SA</strong></a>.<br>
 	Las sinopsis y los carteles de la pel&iacute;culas son propiedad de sus autores.</span>
 	
-	<!-- 
 	<p><span class="titleProyecciones">Software</span><br>
-	<a href="/filmfestCMS">filmfestCMS</a></p> -->
+	<a href="<?= $this->_baseUrl?>filmfestCMS">filmfestCMS</a></p>
+	
 	<p><span class="titleProyecciones">Hosting</span><br>
 	<a href="http://xsto.info" target="_blank"><img src="<?= URL_LOGO ?>www/xsto.info.png" /></a></p>
 </div>

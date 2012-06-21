@@ -76,8 +76,6 @@ abstract class Controller{
 
 				$img = new Image($pathImagen);
 				
-				$img->optimize();
-				
 				if (!empty($thumbnail)){
 					$thumbnail = explode("x", $thumbnail);
 					$img->crop(DS . THUMBNAIL . DS, $thumbnail[0], $thumbnail[1]);

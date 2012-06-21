@@ -166,10 +166,9 @@ div#calendario table th{
 	color:#B80000;
 }
 
-.celda-hoy{
+.hoy{
 	border: none;
 	font-weight: bold;
-	color:#B80000;
 }
 
 .ficha-columnaizquierda{
@@ -431,7 +430,7 @@ div.columna-der {
 }
 
 #escaparate div a span {
-    background: url("/img/logo/play.png") no-repeat scroll 0 0 transparent;
+    background: url("../../commons/img/play.png") no-repeat scroll 0 0 transparent;
     height: 50px;
     left: 30px;
     position: absolute;
@@ -441,35 +440,35 @@ div.columna-der {
 }
 
 li.facebook{
-	background-image: url("/img/logo/www/facebook.png");
+	background-image: url("../img/facebook.png");
     background-position: 0px 50%;
     background-repeat: no-repeat;
     height: 30px;
     padding-left: 40px;
 }
 li.twitter{
-	background-image: url("/img/logo/www/twitter.png");
+	background-image: url("../img/twitter.png");
     background-position: 0px 50%;
     background-repeat: no-repeat;
     height: 30px;
     padding-left: 40px;
 }
 li.blip{
-	background-image: url("/img/logo/www/blip.png");
+	background-image: url("../img/blip.png");
     background-position: 0px 50%;
     background-repeat: no-repeat;
     height: 30px;
     padding-left: 40px;
 }
 li.mail{
-	background-image: url("/img/logo/www/mail.png");
+	background-image: url("../img/mail.png");
     background-position: 0px 50%;
     background-repeat: no-repeat;
     height: 30px;
     padding-left: 40px;
 }
 li.mayo{
-	background-image: url("/img/logo/www/15m.png");
+	background-image: url("../img/15m.png");
     background-position: 0px 50%;
     background-repeat: no-repeat;
     height: 40px;
@@ -546,51 +545,51 @@ div#galeria-texto img:hover {
 
 /* doc */
 div#doc-by{
-	background: url("http://lavapiesdecine.net/img/licencias/BY.png") no-repeat scroll 0 0 transparent;
+	background: url("/img/licencias/BY.png") no-repeat scroll 0 0 transparent;
     height: 40px;
     padding-left: 45px;
     width: 500px;
 }
 div#doc-nd{
-	background: url("http://lavapiesdecine.net/img/licencias/ND.png") no-repeat scroll 0 0 transparent;
+	background: url("/img/licencias/ND.png") no-repeat scroll 0 0 transparent;
     height: 40px;
     padding-left: 45px;
     width: 500px;
 }
 div#doc-nc{
-	background: url("http://lavapiesdecine.net/img/licencias/NC.png") no-repeat scroll 0 0 transparent;
+	background: url("/img/licencias/NC.png") no-repeat scroll 0 0 transparent;
     height: 40px;
     padding-left: 45px;
     width: 500px;
 }
 div#doc-sa{
-	background: url("http://lavapiesdecine.net/img/licencias/SA.png") no-repeat scroll 0 0 transparent;
+	background: url("/img/licencias/SA.png") no-repeat scroll 0 0 transparent;
     height: 40px;
     padding-left: 45px;
     width: 500px;
 }
 div#doc-02{
-	background: url("http://lavapiesdecine.net/img/licencias/88x31/02.png") no-repeat scroll 0 5px transparent;
+	background: url("/img/licencias/88x31/02.png") no-repeat scroll 0 5px transparent;
     height: 50px;
     padding-left: 100px;
 }
 div#doc-colorIURIS{
-	background: url("http://lavapiesdecine.net/img/licencias/88x31/colorIURIS.png") no-repeat scroll 0 15px transparent;
+	background: url("/img/licencias/88x31/colorIURIS.png") no-repeat scroll 0 15px transparent;
     height: 70px;
     padding-left: 100px;
 }
 div#doc-20{
-	background: url("http://lavapiesdecine.net/img/licencias/88x31/20.png") no-repeat scroll 0 5px transparent;
+	background: url("/img/licencias/88x31/20.png") no-repeat scroll 0 5px transparent;
     height: 40px;
     padding-left: 100px;
 }
 div#doc-21{
-	background: url("http://lavapiesdecine.net/img/licencias/88x31/21.png") no-repeat scroll 0 5px transparent;
+	background: url("/img/licencias/88x31/21.png") no-repeat scroll 0 5px transparent;
     height: 50px;
     padding-left: 100px;
 }
 div#doc-22{
-	background: url("http://lavapiesdecine.net/img/licencias/88x31/22.png") no-repeat scroll 0 5px transparent;
+	background: url("/img/licencias/88x31/22.png") no-repeat scroll 0 5px transparent;
     height: 50px;
     padding-left: 100px;
 }

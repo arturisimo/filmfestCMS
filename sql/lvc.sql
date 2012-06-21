@@ -252,7 +252,7 @@ CREATE TABLE IF NOT EXISTS `galerias` (
 
 INSERT INTO `galerias` (`id`, `titulo`, `descripcion`, `galeria`, `alta`, `fecha_alta`) VALUES
 (1, 'Carteles', NULL, 'carteles', 'S', '2012-06-17 10:34:52'),
-(2, '9ª muestra', '', '9-muestra', 'S', '2012-06-17 10:34:52');
+(2, 'filmfestCMS', '', 'filmfestcms', 'S', '2012-06-17 10:34:52');
 
 -- --------------------------------------------------------
 
@@ -271,6 +271,17 @@ CREATE TABLE IF NOT EXISTS `imagenes` (
   PRIMARY KEY (`id`),
   KEY `id_galeria` (`id_galeria`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=1 ;
+
+INSERT INTO `imagenes` (`imagen`, `descripcion`, `id_galeria`, `url_video`, `alta`) VALUES
+('9-muestra-de-cine-de-lavapies.jpg', '8ª Muestra de Cine de Lavapiés', 1, '', 'S'),
+('cartel_atp_9.jpg', 'Convocatoria de obras audiovisuales con licencias libres', 1, '', 'S'),
+('20120613110648.jpg', 'Panel de administración', 2, '', 'S'),
+('20120613110608.jpg', 'Ficha de película visible en la web', 2, '', 'S'),
+('20120613110641.jpg', 'Administración de películas', 2, '', 'S'),
+('20120613160625.jpg', 'Programa de proyecciones', 2, '', 'S'),
+('20120613160654.jpg', 'Gestor de proyecciones', 2, '', 'S'),
+('20120615120651.jpg', 'Gestor de nuevas páginas', 2, '', 'S');
+
 
 -- --------------------------------------------------------
 

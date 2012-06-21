@@ -25,7 +25,7 @@
 		<p><label><?=_("Nombre")?></label> <input  value='<?=$nombre?>' name='espacio' id='espacio' /></p>
 		<p><label><?=_("Direcci&oacute;n")?></label> <input value='<?=$direccion?>' name='direccion' id='direccion' /></p>
 		<p><strong><?= _("Ubicaci&oacute;n")?>:</strong> <span id='id_ciudad' ><?= $direccion." ".UBICACION ?></span></p>
-		<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAInjIAuQbgVc8WgxWlOTj3BQcvJF_4LkfuUMQC7kdwHnEQcm1eBTY8mmP0XZTDcnmzN9I16KLYrqQNw" type="text/javascript"></script>
+		<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=<?= GOOGLEMAP_KEY ?>" type="text/javascript"></script>
 		<div id="map"></div>
 		<p class="break" ><label><?=_("Descripci&oacute;n")?> <span class="small"><?=_("no obligatorio")?></span>
 		</label> <input value='<?=$descripcion?>' name='descripcion' id='descripcion' /></p>

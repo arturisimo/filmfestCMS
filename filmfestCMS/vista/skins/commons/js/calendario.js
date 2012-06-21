@@ -60,7 +60,7 @@ var calendar_display_time = true;
 // [monthString] = Name of current month
 // [year] = Current year
 var todayStringFormat = '[todayString] [UCFdayString]. [day]. [monthString] [year]';
-var pathToImages = '../img/calendario/';	// Relative to your HTML file
+var pathToImages = urlImgAdmin + 'calendario/';	// Relative to your HTML file
 
 var speedOfSelectBoxSliding = 200;	// Milliseconds between changing year and hour when holding mouse over "-" and "+" - lower value = faster
 var intervalSelectBox_minutes = 5;	// Minute select box - interval between each option (5 = default)
