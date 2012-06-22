@@ -105,22 +105,20 @@ class DAO extends Database{
 	public function numeroAutoproduccionesDAO($anyo){
 		return parent::selectCount("select p.id from peliculas p, convocatoria c where p.id=c.id_pelicula and p.muestra='$anyo' and c.alta='S'", __FUNCTION__.$anyo);
 	}
-    
-
-	public function listadoAutoproduccionesDAO($anyo, $inicio, $total){
-			$sql = sprintf("select p.titulo, c.id, c.duracion, c.anyo, c.genero, c.pais, l.id as id_licencia, l.nombre as nombre_licencia, c.autor, p.sinopsis, c.fecha_alta, p.enlace as video,
-						    IF(i.imagen is null, '%s/gris.jpg', concat('%s/peliculas/%s/tn/', i.imagen)) as cartel
+    	public function listadoAutoproduccionesDAO($anyo, $inicio, $total){
+			$sql = "select p.titulo, c.id, c.duracion, c.anyo, c.genero, c.pais, l.id as id_licencia, l.nombre as nombre_licencia, c.autor, p.sinopsis, c.fecha_alta, p.enlace as video,
+						    IF(i.imagen is null, '".URL_IMG."gris.jpg', concat('".URL_IMG."peliculas/$anyo/tn/', i.imagen)) as cartel
 							from peliculas p LEFT JOIN imagenes_pelicula i ON p.id = i.id_pelicula, convocatoria c, licencias l 
-						    where p.id=c.id_pelicula and p.licencia = l.id and p.muestra='%s' and c.alta='S' order by p.id desc LIMIT %s, %s", URL_IMG, URL_IMG, $anyo, $anyo, $inicio, $total);
+						    where p.id=c.id_pelicula and p.licencia = l.id and p.muestra='$anyo' and c.alta='S' order by p.id desc LIMIT $inicio, $total";
 			return parent::selectQuery($sql, true, __FUNCTION__.$anyo.$inicio.$total);
 	}
 	
 	/* material seleccionado */
 	public function seleccionDAO($anyo){
-			$sql = sprintf("select p.id, p.titulo, c.autor, p.muestra, 
-							IF(i.imagen is null, '%s/gris.jpg', concat('%s/peliculas/%s/md/', i.imagen)) as cartel 
+			$sql = "select p.id, p.titulo, c.autor, p.muestra, 
+							IF(i.imagen is null, '".URL_IMG."gris.jpg', concat('".URL_IMG."peliculas/$anyo/md/', i.imagen)) as cartel 
 							from peliculas p LEFT JOIN imagenes_pelicula i ON p.id = i.id_pelicula, convocatoria c 
-							where p.id=c.id_pelicula and p.muestra='%s' and p.id_proyeccion > 0", URL_IMG, URL_IMG, $anyo, $anyo);
+							where p.id=c.id_pelicula and p.muestra='$anyo' and p.id_proyeccion > 0";
 			return parent::selectQuery($sql, true, __FUNCTION__.$anyo);
 	}
 	public function textoSeleccionDAO($id){ 
