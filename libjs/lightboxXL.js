@@ -551,6 +551,10 @@ Lightbox.prototype = {
 				var codigoVimeo = url.split("http://vimeo.com/");
 				obj.innerHTML = "<embed src='http://vimeo.com/moogaloop.swf?clip_id="+ codigoVimeo[1] + "' type='application/x-shockwave-flash' allowscriptaccess='always' allowfullscreen='true' />";
 			}
+			//mp3
+			else if(url.indexOf("mp3") !=-1){
+				obj.innerHTML =  "<embed type='application/x-shockwave-flash' flashvars='audioUrl="+url+"' src='http://www.google.com/reader/ui/3523697345-audio-player.swf' quality='best'></embed>"; 
+			}
 			else{
 				
 				obj.innerHTML = "<object classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0\" width=\""+elementArray[activeElement][2]+"\" height=\""+elementArray[activeElement][3]+"\">" +
